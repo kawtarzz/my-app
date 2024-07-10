@@ -17,7 +17,7 @@ export default function AboutPage() {
                 <hr />
                 <div className="content">
                     <p>
-                        If you'd like to see more of my visual art work, you can check it out here:
+                        If you would like to see more of my visual art work, you can check it out here:
                          <a href="https://art.kawtar-azzouzi.com/" className="dark-link">art portfolio</a>.
                     </p>
                 </div>
