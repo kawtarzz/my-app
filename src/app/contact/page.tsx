@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "@/app/globals.css";
-import ContNavbar from "../components/ContNavbar";
+import ColorBlocks from "../components/ColorBlocks";
 
 const Contact = () => {
   const [templateParams, setTemplateParams] = useState({
@@ -44,7 +44,7 @@ const Contact = () => {
 
   return (
     <>
-    <ContNavbar/>
+    <ColorBlocks/>
       <div className="contact-form container">
         <p className="text-2xl font-bold my-8">
           Open to freelance or full-time opportunities. Lets connect!

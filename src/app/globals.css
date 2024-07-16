@@ -20,24 +20,74 @@ body {
   --black: #000000;
   --ash-black: #222;
   --white: #fafafa;
-  --beige:  rgb(247, 245, 231);
   --sky: #00ccff;
-  --green: #22dddd;
   --mint-green: #00ffcc;
   --blue: #2319ab;
-  --dusk: #6600ff;
-  --purple: #e959ff;
-  --pink: hsl(338, 100%, 56%);
-  --red: #f42e2e;
+  --red: #ff3c00;
   --orange: #ff7c1e;
   --yellow: #ffbb00;
   --light-pink: #ff99cc;
+  --primary-color:  rgb(247, 245, 231);
   --background: var(--beige);
   --accent: var(--blue);
+  --secondary-color: var(--blue);
+  --tertiary-color: var(--red);
+  --text-color: #1a153e;
   padding: 0;
-  background-color: var(--background);
+  background-color: var(--primary-color);
   color: var(--accent);
   overflow: auto;
+}
+
+
+a {
+  @apply text-2xl font-bold text-balance;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.dark-link {
+  color: var(--sky);
+  font-weight: 700;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+main {
+  @apply h-screen w-full grid grid-rows-3 grid-cols-none lg:grid-rows-none lg:grid-cols-2 overflow-hidden;
+}
+
+h1 {
+  @apply text-5xl font-bold;
+  color: var(--secondary-color);
+  padding: 1rem;
+}
+
+h2 {
+  @apply text-3xl font-bold;
+  color: var(--tertiary-color);
+  padding: .5rem;
+}
+
+h3 {
+  @apply text-2xl font-bold text-balance;
+  color: var(--text-color);
+  padding: .5rem;
+}
+
+p {
+  @apply text-base;
+  color: var(--text-color);
+  padding: .5rem;
 }
 
 button {
@@ -72,42 +122,8 @@ button:hover {
   max-width: 400px;
 }
 
-a {
-  color: var(--background);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
 
-a:hover {
-  color: var(--accent);
-}
-
-.dark-link {
-  color: var(--sky);
-  font-weight: 700;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-main {
-  @apply h-screen w-full grid grid-rows-3 grid-cols-none lg:grid-rows-none lg:grid-cols-2 overflow-hidden;
-}
-
-h1 {
-  @apply text-4xl font-bold text-balance;
-}
-
-h2 {
-  @apply text-xl font-bold text-balance;
-}
-
-h3 {
-  @apply text-lg font-bold text-balance;
-}
+/* Contact Page */
 
 .contact-form {
   display: flex;
@@ -129,6 +145,27 @@ h3 {
   max-width: 800px;
 }
 
+/* Work / Projects Page */
+
+.project-title {
+  @apply text-2xl font-bold;
+  color:#2d2f67;
+  font-weight: 600;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-left: 40px;
+}
+
+.project-subtitle {
+  @apply text-xl font-bold;
+  color: var(--tertiary-color);
+  font-weight: 600;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-left: 40px;
+
+}
+
 .project-text {
   margin: 1rem auto;
   max-height: fit-content;
@@ -138,6 +175,31 @@ h3 {
   transition: all 0.3s ease;
 }
 
+.portfolio-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.box-content .box-content-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  padding: 1rem 1rem;
+  margin: 0 auto;
+}
+
+
+.box-content-img:hover {
+ scale: 1.1;
+}
+
+
+/* Landing / Home Page  */
 .card {
   display: flex;
   flex-direction: column;
@@ -183,19 +245,6 @@ h3 {
 .flex-grid .col {
   flex: 1;
   padding: 10px;
-}
-
-.social-icons {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  color: var(--pink);
-  width: 100%;
-}
-
-.social-icons a:hover {
-  color: var(--yellow);
-  scale: 1.1;
 }
 
 .card-image {
@@ -248,4 +297,27 @@ h3 {
   margin: 0 auto;
   width: 100%;
   padding: 1rem;
+}
+
+/* About Page */
+
+
+.about-text {
+  padding: 20px 10px;
+  font-size: 56px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+.subheading_text {
+  text-align: center;
+  margin: 0;
+  line-height: 50px;
+  font-size: 35px;
+  font-weight: 600;
+  padding: 20px 10px;
+
 }

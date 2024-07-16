@@ -14,7 +14,7 @@ export default function LandingPage() {
           transition={{ duration: 0.5, delay: 0.1, ease: [0.87, 0, 0.13, 1] }}
           exit={{ opacity: 0, x: -100 }}>
             <Link href="/work">
-              <h2>Work</h2>
+              Work
             </Link>
           </motion.div>
           <motion.div className="card card2" 
@@ -24,7 +24,7 @@ export default function LandingPage() {
           exit={{ opacity: 0, x: -100 }}
           >
             <Link href="/about">
-              <h2>About</h2>
+              About
             </Link>
           </motion.div>
           <motion.div className="card card3" 
@@ -33,7 +33,7 @@ export default function LandingPage() {
           transition={{ duration: .8, delay: 0.5, ease: [0.87, 0, 0.13, 1] }}
           exit={{ opacity: 0, x: -100 }}>
             <Link href="/contact">
-              <h2>Contact</h2>
+              Contact
             </Link>
           </motion.div>
         </AnimatePresence>

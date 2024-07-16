@@ -1,6 +1,6 @@
 "use client";
 import { motion, Variants } from "framer-motion";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import "@/app/globals.css";
@@ -44,7 +44,16 @@ export default function Card({
   demo,
   img,
 }: Props) {
-  const [toggleCardContent, setToggleCardContent] = React.useState(false);
+  const [toggleCardContent, setToggleCardContent] = useState(false);
+  const [buttonText, setButtonText] = useState("Show Details");
+
+  useEffect(() => {
+    if (toggleCardContent) {
+      setButtonText("Hide Details");
+    } else {
+      setButtonText("Show Details");
+    }
+  }, [toggleCardContent]);
 
   return (
     <>
@@ -69,7 +78,12 @@ export default function Card({
           }}
           variants={cardVariants}
         >
+          
           <div className="col">
+            { !toggleCardContent && (
+              <>
+              <div className="content">
+
             <Image
               src={img}
               alt="project image"
@@ -77,12 +91,34 @@ export default function Card({
               width={500}
               height={500}
               className="card-image"
+              onClick={() => setToggleCardContent(!toggleCardContent)} />
+              <h2 className="project-title">{title}</h2>
+              <button
               onClick={() => setToggleCardContent(!toggleCardContent)}
-            />
-                <h2 className="project-title">{title}</h2>
+              >
+              {buttonText}
+            </button>
+            </div>
+                </>
+            )
+            }
             {toggleCardContent && (
               <>
               <div className="content">
+              <Image
+              src={img}
+              alt="project image"
+              priority={true}
+              width={700}
+              height={700}
+              className="card-image"
+              onClick={() => setToggleCardContent(!toggleCardContent)} />
+              <h2 className="project-title">{title}</h2>
+              <button
+              onClick={() => setToggleCardContent(!toggleCardContent)}
+              >
+               {buttonText}
+            </button>
                 <div className="project-text">
                 <p>{description}</p>
                 <br />
@@ -92,8 +128,14 @@ export default function Card({
                 <p>{solution}</p>
                 </div>
                 <div className="project-subtitle">
-                  <h3>Tech Stack:</h3>
-                  {subtitle}</div>
+                 <h3>
+                  Tech Stack:
+                  </h3>
+                  
+                  <p>
+                    {subtitle}
+                    </p>
+                  </div>
 
                 <div className="btn-container">
                     <Link href={repolink} target="_blank">
@@ -106,11 +148,7 @@ export default function Card({
                       Demo
                   </button>
                     </Link>
-                  <button
-                    onClick={() => setToggleCardContent(!toggleCardContent)}
-                    >
-                    Hide Details
-                  </button>
+                 
                 </div>
             </div>
               </>
@@ -126,7 +164,7 @@ export default function Card({
 export function CardList({ projects }: { projects: Props[] }) {
   return (
     <>
-    <div className="flex-grid">
+    <div className="portfolio-box">
 
         {projects.map((project: Props) => (
           <div key={project.id}>
