@@ -15,6 +15,7 @@ interface Props {
   solution: string;
   repolink: string;
   demo: string;
+  video?: string;
   img: string;
 }
 
@@ -42,6 +43,7 @@ export default function Card({
   subtitle,
   repolink,
   demo,
+  video,
   img,
 }: Props) {
   const [toggleCardContent, setToggleCardContent] = useState(false);
@@ -131,10 +133,16 @@ export default function Card({
                  <h3>
                   Tech Stack:
                   </h3>
-                  
                   <p>
                     {subtitle}
                     </p>
+                  </div>
+                  <div className="video-container">
+                    {video && (
+                      <video controls>
+                        <source src={video} type="video/mp4" />
+                      </video>
+                    )}
                   </div>
 
                 <div className="btn-container">

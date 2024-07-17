@@ -27,6 +27,7 @@ export const projects = [
       " An eCommerce platform offering personalized user account privileges. Upon registration, users gain the ability to browse and shop by specific categories or utilize a search function to find desired items. The platform features a user-friendly shopping cart where items can be added and stored as users continue to browse. A seamless checkout process culminates in an order confirmation, enhancing the overall shopping experience.",
     repolink: "https://github.com/kawtarzz/shoptheblock-ecomm-fullstack",
     demo: "https://locus-app-f0eb9.web.app/",
+    video: "videos/shoptheblock_1.mp4",
     img: "images/shoptheblock.svg",
   },
   {

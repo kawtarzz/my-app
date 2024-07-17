@@ -44,7 +44,7 @@ const Contact = () => {
 
   return (
     <>
-    <ColorBlocks/>
+      <ColorBlocks />
       <div className="contact-form container">
         <p className="text-2xl font-bold my-8">
           Open to freelance or full-time opportunities. Lets connect!
