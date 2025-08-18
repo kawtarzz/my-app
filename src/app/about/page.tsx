@@ -8,29 +8,26 @@ export default function AboutPage() {
         <>
             <ColorBlocks />
             <div className="about-page content">
-                <Image src="/images/kawtar.svg" alt="Profile Picture" width={500} height={500} />
-                <h1 data-aos="fade-up">
+                <Image src="../../public/images/kawtar-azzouzi_headshot.jpg" alt="Kawtar Azzouzi" width={500} height={400} className="profile-image" />"
+                   <h1 data-aos="fade-up">
                     ABOUT
                 </h1>
                 <h2 data-aos="fade-up">
-                    Visual Arts & Web Development
+                    Full-Stack Web Developer & Designer
                 </h2>
                 <div className="col-xl-6 p-0" data-aos="fade-right">
                     <p>
-                        I am Kawtar, a first-generation Moroccan-American designer and Web Developer based in Nashville, TN. With over six years of experience in branding, illustration, and animation, I continually strive to push the boundaries of my creativity through new mediums and technologies. My work is bold, colorful, and imbued with a modern feminine energy, often drawing inspiration from my North African heritage and the vibrant nostalgia of 90s Saturday morning cartoons.
+                        Kawtar Azzouzi is a Full-Stack Web Developer with a strong foundation in design, combining technical expertise with creative problem-solving to build user-focused applications. Currently based in Dover, New Hampshire, she brings 18+ months of professional web development experience working with clients ranging from environmental non-profits to healthcare startups.
+                        <br />
+                        <br />
+                        Her recent work includes building complex data-driven websites with custom database architecture, API integrations, and responsive design solutions. She's currently exploring modern frontend frameworks and cloud deployment strategies to expand her technical toolkit.
+                        <br />
+                        <br />
+                        Outside of coding, Kawtar approaches creativity the same way she approaches development - always learning and experimenting. Whether she's mastering machine sewing techniques, hiking New Hampshire's trails, or picking up her guitar, she brings the same methodical problem-solving and attention to detail that makes her applications both functional and elegant. This curiosity and adaptability drive her continuous growth in both creative pursuits and emerging technologies.
                     </p>
-                    <p>
-                        With a Bachelor of Fine Arts from the School of the Art Institute of Chicago and a Full Stack Web Development certification from Nashville Software School, I have a unique blend of creative and technical skills, enabling me to create fully custom, user-centric applications.
-                        When I'm not working, I enjoy being outdoors, practicing drums, and telling my dog Jerry just how good he is.
-                    </p>
-                    <hr />
-                    <div className="content">
-                        <p>
-                            If you would like to see more of my visual art work, you can check it out here:
-                            <a href="https://art.kawtar-azzouzi.com/" className="dark-link">art portfolio</a>.
-                        </p>
-                    </div>
+                    <hr />                    
                 </div>
+           
             </div>
         </>
     );

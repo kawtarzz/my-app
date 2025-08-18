@@ -10,15 +10,23 @@ const WorkPage: React.FC = () => {
   return (
     <>
     <ColorBlocks />
-          <div className="content">
+      <div className="content">
+        <div className="page-title">
+          <motion.h1
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Projects
+          </motion.h1>
+        </div>
           <div className="content_box">
-            <h1>
-              Work
-            </h1>
-          <h2>Web Development Projects</h2>
+      
+          <h3 className="content-title">Web Development</h3>
         <div className="portfolio-box">
             <CardList projects={projects} />
           </div>
+      
         </div>
       </div>
     </>

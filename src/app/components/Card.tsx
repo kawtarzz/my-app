@@ -13,7 +13,7 @@ interface Props {
   description: string;
   problem: string;
   solution: string;
-  repolink: string;
+  url: string;
   demo: string;
   video?: string;
   img: string;
@@ -41,7 +41,7 @@ export default function Card({
   problem,
   solution,
   subtitle,
-  repolink,
+  url,
   demo,
   video,
   img,
@@ -146,9 +146,9 @@ export default function Card({
                   </div>
 
                 <div className="btn-container">
-                    <Link href={repolink} target="_blank">
+                    <Link href={url} target="_blank">
                   <button>
-                      Repo
+                      View
                   </button>
                     </Link>
                     <Link href={demo} target="_blank">
@@ -173,13 +173,12 @@ export function CardList({ projects }: { projects: Props[] }) {
   return (
     <>
     <div className="portfolio-box">
-
         {projects.map((project: Props) => (
           <div key={project.id}>
               <Card {...project} />
-             
           </div>
         ))}   
+       
         </div>
     </>
   );
