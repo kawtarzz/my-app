@@ -38,7 +38,7 @@ export default function ShopTheBlock() {
               Back to Portfolio
             </a>
             <a
-              href={project.repolink}
+              href={project.url}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 ml-4"

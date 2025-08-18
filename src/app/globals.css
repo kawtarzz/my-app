@@ -22,12 +22,13 @@ body {
   --white: #fafafa;
   --sky: #00ccff;
   --mint-green: #00ffcc;
-  --blue: #2319ab;
+  --blue: #1a2474;
+  --beige: #f7f5e7;
   --red: #ff3c00;
   --orange: #ff7c1e;
   --yellow: #ffbb00;
   --light-pink: #ff99cc;
-  --primary-color:  rgb(247, 245, 231);
+  --primary-color: rgb(247, 245, 231);
   --background: var(--beige);
   --accent: var(--blue);
   --secondary-color: var(--blue);
@@ -90,25 +91,62 @@ p {
   padding: .5rem;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.page-title {
+  @apply text-3xl font-bold;
+  color: var(--secondary-color);
+  padding: 1rem;
+}
+
+.content-title {
+  @apply text-2xl font-bold;
+  color: var(--secondary-color);
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
 button {
   font-weight: 700;
   padding: .5rem 1rem;
-  border: 1.5px solid var(--accent);
+  border: 2px solid var(--accent);
   border-radius: 10px;
   background: none;
-  color: var(--accent);
+  color: var(--blue);
   cursor: pointer;
   transition: all 0.3s ease;
   margin: .5rem auto;
   display: block;
   text-align: center;
-  font-size: .8rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
 button:hover {
-  background: var(--accent);
-  color: var(--background);
+  background: var(--light-pink);
 }
 
 .btn-container {
@@ -134,22 +172,11 @@ button:hover {
   margin: 0 auto;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
-}
-
 /* Work / Projects Page */
 
 .project-title {
   @apply text-2xl font-bold;
-  color:#2d2f67;
+  color: #2d2f67;
   font-weight: 600;
   margin: 0 auto;
   padding: 1rem;
@@ -195,7 +222,7 @@ button:hover {
 
 
 .box-content-img:hover {
- scale: 1.1;
+  scale: 1.1;
 }
 
 
@@ -208,11 +235,11 @@ button:hover {
 }
 
 .card1 {
-  background-color:#c7522a;
+  background-color: #c7522a;
 }
 
 .card2 {
-  background-color:#108585;
+  background-color: #108585;
 }
 
 .card3 {
@@ -236,12 +263,13 @@ button:hover {
 
 .landing {
   display: block;
-  padding:100px;
+  padding: 100px;
 }
 
 .flex-grid {
   display: flex;
 }
+
 .flex-grid .col {
   flex: 1;
   padding: 10px;
