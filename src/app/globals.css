@@ -26,6 +26,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
+  --text-color: #1a153e;
+  --secondary-text-color: #26272c;
+
 }
 
 body {
@@ -59,7 +62,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
@@ -96,9 +98,11 @@ h3 {
 .content-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
   align-items: center;
-  padding: 1rem;
+  padding: 3rem 4rem;
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
@@ -123,16 +127,20 @@ h3 {
 button {
   font-weight: 700;
   padding: 0.5rem 1rem;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 10px;
-  background: none;
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--white);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 0.5rem auto 1.5rem auto;
   display: block;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 button:hover {
@@ -159,21 +167,46 @@ button:hover {
 .contact-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 600px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 2rem;
 }
 
 .block {
+  display: inline-block;
   display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  margin: 0 auto;
+  flex-direction: row;
+}
+
+.block:active,
+.block:focus {
+  background: #e9f2ff;
+}
+
+input,
+textarea {
   width: 100%;
-  max-width: 800px;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  min-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+
+  input,
+  textarea {
+    min-width: 400px;
+    max-width: 600px;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
 }
 
 /* Work / Projects Page */

@@ -46,35 +46,31 @@ const Contact = () => {
   return (
     <>
       <ColorBlocks />
-      <div className="contact-form content">
-      <h1 className="page-title">Contact Me</h1>
+      <div className="content container">
+      <h1 className="contact-title">Contact Me</h1>
       <p className="subtitle">
         Have a question or want to work together? Fill out the form below or
         email me directly at{" "}
         <a href="mailto:kawtaryazzouzi@gmail.com" />
       </p>
 
-      <form onSubmit={sendEmail} className="w-full max-w-lg">
-        <div className="flex flex-wrap -mx-3 mb-6">
-        {/* Name and Email side by side */}
-        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-          <label
+      <form onSubmit={sendEmail}>
+        <div className="contact-form">
+        <label
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          htmlFor="grid-first-name"
+          htmlFor="grid-name"
           >
           Name
           </label>
           <input
-          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          placeholder="Name"
-          type="text"
+          className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
           name="name"
-          value={templateParams.name}
+          type="text"
+          placeholder="Jane Doe"
           onChange={handleInputChange}
+          value={templateParams.name}
           required
           />
-        </div>
-        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
           <label
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           htmlFor="grid-email"
@@ -90,11 +86,8 @@ const Contact = () => {
           value={templateParams.email}
           required
           />
-        </div>
-        </div>
-
-        <div className="flex flex-wrap -mx-3 mb-6">
-        <div className="w-full px-3">
+      
+       
           <label
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           htmlFor="grid-subject"
@@ -109,10 +102,8 @@ const Contact = () => {
           onChange={handleInputChange}
           required
           />
-        </div>
-        </div>
-        <div className="flex flex-wrap -mx-3 mb-6">
-        <div className="w-full px-3">
+      
+     
           <label
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           htmlFor="grid-message"
@@ -127,8 +118,8 @@ const Contact = () => {
           onChange={handleInputChange}
           required
           />
-        </div>
-        </div>
+          </div>
+     
         <div className="md:flex">
         <div>
           <button className="alt-btn" type="submit" value="Send">
