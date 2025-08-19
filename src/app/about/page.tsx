@@ -27,17 +27,17 @@ export default function AboutPage() {
                         Outside of coding, Kawtar approaches creativity the same way she approaches development - always learning and experimenting. Whether she's mastering machine sewing techniques, hiking New Hampshire's trails, or picking up her guitar, she brings the same methodical problem-solving and attention to detail that makes her applications both functional and elegant. This curiosity and adaptability drive her continuous growth in both creative pursuits and emerging technologies.
                     </p>
                     <br />
+                </div>
+                <hr />
                 <a
                     href="https://drive.google.com/file/d/1TbpHyF-VUFEWO3sAMNdBEsFIVAEtXdGF/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button"
+                    className="resume-link"
                     data-aos="fade-up"
                 >
-                    View Resume (PDF)
+                    View Resume <i className="file-type">(PDF)</i>
                 </a>
-                </div>
-                <hr />
                 
            
             </div>
