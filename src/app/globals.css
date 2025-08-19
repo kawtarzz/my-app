@@ -3,20 +3,6 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
   --black: #000000;
   --ash-black: #222;
   --white: #fafafa;
@@ -28,21 +14,25 @@ body {
   --orange: #ff7c1e;
   --yellow: #ffbb00;
   --light-pink: #ff99cc;
-  --primary-color: rgb(247, 245, 231);
-  --background: var(--beige);
-  --accent: var(--blue);
-  --secondary-color: var(--blue);
-  --tertiary-color: var(--red);
+  --primary-color: #f7f5e7;
+  --secondary-color: #1a2474;
+  --tertiary-color: #ff3c00;
+  --accent: #1a2474;
+  --background: #f7f5e7;
   --text-color: #1a153e;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
   padding: 0;
   background-color: var(--primary-color);
   color: var(--accent);
   overflow: auto;
 }
 
-
 a {
-  @apply text-2xl font-bold text-balance;
   color: var(--primary-color);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -68,7 +58,6 @@ main {
 }
 
 h1 {
-  @apply text-5xl font-bold;
   color: var(--secondary-color);
   padding: 1rem;
 }
@@ -76,32 +65,22 @@ h1 {
 h2 {
   @apply text-3xl font-bold;
   color: var(--tertiary-color);
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 h3 {
   @apply text-2xl font-bold text-balance;
   color: var(--text-color);
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 p {
   @apply text-base;
   color: var(--text-color);
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
-}
-
+.content,
 .content-box {
   display: flex;
   flex-direction: column;
@@ -128,21 +107,19 @@ p {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-
 button {
   font-weight: 700;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 2px solid var(--accent);
   border-radius: 10px;
   background: none;
   color: var(--blue);
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: .5rem auto;
+  margin: 0.5rem auto 1.5rem auto;
   display: block;
   text-align: center;
   font-size: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 button:hover {
@@ -160,9 +137,7 @@ button:hover {
   max-width: 400px;
 }
 
-
 /* Contact Page */
-
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -173,14 +148,12 @@ button:hover {
 }
 
 /* Work / Projects Page */
-
 .project-title {
   @apply text-2xl font-bold;
   color: #2d2f67;
   font-weight: 600;
   margin: 0 auto;
-  padding: 1rem;
-  padding-left: 40px;
+  padding: 1rem 0 1rem 40px;
 }
 
 .project-subtitle {
@@ -188,9 +161,7 @@ button:hover {
   color: var(--tertiary-color);
   font-weight: 600;
   margin: 0 auto;
-  padding: 1rem;
-  padding-left: 40px;
-
+  padding: 1rem 0 1rem 40px;
 }
 
 .project-text {
@@ -205,7 +176,6 @@ button:hover {
 .portfolio-box {
   display: flex;
   flex-wrap: wrap;
-  flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
 }
@@ -216,17 +186,15 @@ button:hover {
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  padding: 1rem 1rem;
+  padding: 1rem;
   margin: 0 auto;
 }
-
 
 .box-content-img:hover {
   scale: 1.1;
 }
 
-
-/* Landing / Home Page  */
+/* Landing / Home Page */
 .card {
   display: flex;
   flex-direction: column;
@@ -286,15 +254,14 @@ button:hover {
 
 .card-image:hover {
   transform: scale(1.1);
-  border: #ff99cc 2px solid;
+  border: 2px solid var(--light-pink);
 }
-
 
 .card-title {
   font-weight: 700;
   color: var(--white);
   margin: 1rem 0;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   max-width: 500px;
 }
 
@@ -328,8 +295,6 @@ button:hover {
 }
 
 /* About Page */
-
-
 .about-text {
   padding: 20px 10px;
   font-size: 56px;
@@ -347,5 +312,14 @@ button:hover {
   font-size: 35px;
   font-weight: 600;
   padding: 20px 10px;
+}
 
+.resume-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
