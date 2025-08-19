@@ -9,7 +9,7 @@ export default function AboutPage() {
             <ColorBlocks />
           
             <div className="about-page content">
-                <Image src="/images/kawtar-azzouzi_headshot.jpg" alt="Kawtar Azzouzi" width={500} height={400} className="profile-image" />"
+                <Image src="/images/kawtar-azzouzi_headshot.jpg" alt="Kawtar Azzouzi" width={500} height={400} className="profile-image" />
                    <h1 data-aos="fade-up">
                     ABOUT
                 </h1>
