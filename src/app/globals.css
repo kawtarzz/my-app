@@ -8,7 +8,7 @@
   --primary-color: #108585;
   --secondary-color: #1a2258;
   --tertiary-color: #c7522a;
-  --accent: #ffcbec;
+  --accent: #EBAF17;
   --background: #f7f5e7;
   --text-color: #222645;
 
@@ -24,7 +24,7 @@
 body {
   padding: 0;
   background-color: var(--background);
-  color: var(--accent);
+  color: var(--text-color);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 500;
@@ -277,7 +277,6 @@ textarea {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .card:hover {
   transform: scale(1.05);
   box-shadow: #1a153e 5px 2px 20px;
@@ -289,24 +288,12 @@ textarea {
   background-color: #c7522a;
 }
 
-.card1:hover {
-  letter-spacing: 0.1em;
-}
-
 .card2 {
   background-color: #108585;
 }
 
-.card2:hover {
-  letter-spacing: 0.1em;
-}
-
 .card3 {
   background-color: #ebaf17;
-}
-
-.card3:hover {
-  letter-spacing: 0.1em;
 }
 
 .card-container {
@@ -336,7 +323,7 @@ textarea {
 
 .landing p {
   font-size: 1.2rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-top: 1rem;
 }
 
