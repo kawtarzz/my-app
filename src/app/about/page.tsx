@@ -26,9 +26,7 @@ export default function AboutPage() {
                         <br />
                         Outside of coding, Kawtar approaches creativity the same way she approaches development - always learning and experimenting. Whether she's mastering machine sewing techniques, hiking New Hampshire's trails, or picking up her guitar, she brings the same methodical problem-solving and attention to detail that makes her applications both functional and elegant. This curiosity and adaptability drive her continuous growth in both creative pursuits and emerging technologies.
                     </p>
-                </div>
-                <hr />
-                
+                    <br />
                 <a
                     href="/files/kawtar-azzouzi_resume.pdf"
                     target="_blank"
@@ -38,6 +36,9 @@ export default function AboutPage() {
                 >
                     View Resume (PDF)
                 </a>
+                </div>
+                <hr />
+                
            
             </div>
         </>
