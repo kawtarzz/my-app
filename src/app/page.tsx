@@ -7,9 +7,8 @@ export default function Home() {
     <> <main>
         <div className=" flex-1 w-full flex items-center p-8">
           <div className="landing text-center">
-            <h1>
-              Kawtar Azzouzi
-            </h1>
+          <h1>Kawtar Azzouzi</h1>
+          <br />
             <p>Full-Stack Web Developer & Designer</p>
           </div>
         </div>

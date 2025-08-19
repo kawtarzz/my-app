@@ -10,10 +10,10 @@ export default function AboutPage() {
           
             <div className="about-page content">
                 <Image src="/images/kawtar-azzouzi_headshot.jpg" alt="Kawtar Azzouzi" width={500} height={400} className="profile-image" />
-                   <h1 data-aos="fade-up">
-                    ABOUT
+                   <h1 data-aos="fade-up" className="page-title">
+                    Kawtar Azzouzi
                 </h1>
-                <h2 data-aos="fade-up">
+                <h2 data-aos="fade-up" className="subtitle">
                     Full-Stack Web Developer & Designer
                 </h2>
                 <div className="col-xl-6 p-0"               data-aos="fade-right">
@@ -28,10 +28,10 @@ export default function AboutPage() {
                     </p>
                     <br />
                 <a
-                    href="/files/kawtar-azzouzi_resume.pdf"
+                    href="https://drive.google.com/file/d/1TbpHyF-VUFEWO3sAMNdBEsFIVAEtXdGF/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="resume-link"
+                    className="button"
                     data-aos="fade-up"
                 >
                     View Resume (PDF)

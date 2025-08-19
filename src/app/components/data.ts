@@ -41,49 +41,6 @@ export const projects = [
     solution: "I developed this project to challenge myself with a new technology stack. I used Next.js for the front end, Prisma for the ORM, Clerk for user authentication, and MySQL for the database. The application features a responsive design, user authentication, and full CRUD functionality. It also allows users to upload photos for their product and billboard listings. I faced challenges with configuring Cloudinary for image uploads and Clerk for user authentication, but I overcame these challenges by reading the documentation and seeking help from online developer communities.",
     url: "https://github.com/kawtarzz/eComm-AdminDash",
     demo: "https://e-comm-admin-dash-git-main-kawtarzzs-projects.vercel.app/",
-    img: "images/sellerdashboard.svg",
-  },
-  {
-    id: 1,
-    title: "Art Project 1",
-    subtitle: "Art | Design",
-    description:
-      "This is an art project description.",
-    problem:
-      "This is an art project problem.",
-    solution:
-      "This is an art project solution.",
-    url: "",
-    demo: "",
-    img: "images/artdesign.png",
-  },
-  {
-    id: 2,
-    title: "Art Project 2",
-    subtitle: "Art | Design",
-    description:
-      "This is an art project description.",
-    problem:
-      "This is an art project problem.",
-    solution:
-      "This is an art project solution.",
-    url: "",
-      demo: "",
-    img: "images/artdesign2.png",
-   
-  },
-  {
-    id: 3,
-    title: "Art Project 3",
-    subtitle: "Art | Design",
-    description:
-      "This is an art project description.",
-    problem:
-      "This is an art project problem.",
-    solution:
-      "This is an art project solution.",
-      url: "",
-      demo: "",
-    img: "images/artdesign3.png",
+    img: "images/sellerdashboard.svg"
   }
 ];
