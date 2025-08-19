@@ -10,7 +10,7 @@ export default function Home() {
             <h1>
               Kawtar Azzouzi
             </h1>
-            <p>Graphic/Web Design/Art</p>
+            <p>Full-Stack Web Developer & Designer</p>
           </div>
         </div>
           <LandingPage/>
