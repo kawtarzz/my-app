@@ -3,30 +3,20 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --black: #000000;
-  --ash-black: #222;
-  --white: #fafafa;
-  --sky: #00ccff;
-  --mint-green: #00ffcc;
-  --blue: #1a2474;
-  --beige: #f7f5e7;
-  --red: #ff3c00;
-  --orange: #ff7c1e;
-  --yellow: #ffbb00;
-  --light-pink: #ff99cc;
 
+  --white: #ffffff;
   --primary-color: #108585;
-  --secondary-color: #1a2474;
+  --secondary-color: #1a2258;
   --tertiary-color: #c7522a;
-  --accent: #26272c;
+  --accent: #ffcbec;
   --background: #f7f5e7;
-  --text-color: #1a153e;
+  --text-color: #222645;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --text-color: #1a153e;
+  --text-color: #212444;
   --secondary-text-color: #26272c;
 
 }
@@ -49,22 +39,12 @@ body {
 }
 
 .card a:hover {
-  color: var(--accent);
+  color: var(--text-color);
 }
 
 .dark-link {
   color: var(--sky);
   font-weight: 700;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
 }
 
 @layer utilities {
@@ -105,14 +85,17 @@ h3 {
   padding: 3rem 4rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 800px;
 }
+
 
 .page-title {
   @apply text-5xl font-bold;
-  letter-spacing: .03em;
+  letter-spacing: .04em;
   color: var(--secondary-color);
   padding: 1rem;
+  width: 100%;
+  text-align: center;
+
 }
 
 .content-title {
@@ -163,15 +146,30 @@ button:hover {
 }
 
 /* Contact Page */
-
-.contact-form {
+.container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
-  width: 100%;
-  border: 1px solid var(--secondary-color);
-  border-radius: 10px;
+  max-width: 92vw;
   padding: 2rem;
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: contactHeaderFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes contactHeaderFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .block {
@@ -187,7 +185,7 @@ button:hover {
 
 input,
 textarea {
-  width: 100%;
+  width: 95%;
   padding: 0.75rem;
   margin: 0.5rem 0;
   border: 1px solid var(--secondary-color);
@@ -217,7 +215,6 @@ textarea {
   letter-spacing: .1rem;
   text-transform: uppercase;
   margin: 0 auto;
-  font-size: 1.5rem;
 }
 
 .project-subtitle {
@@ -229,11 +226,10 @@ textarea {
 }
 
 .subtitle {
-  @apply text-xl font-bold;
   color: var(--tertiary-color);
   font-weight: 600;
   margin: 0 auto;
-  padding: .25rem 0 1rem 0;
+  padding: 1rem 2rem;
 }
 
 .project-text {
@@ -293,12 +289,24 @@ textarea {
   background-color: #c7522a;
 }
 
+.card1:hover {
+  letter-spacing: 0.1em;
+}
+
 .card2 {
   background-color: #108585;
 }
 
+.card2:hover {
+  letter-spacing: 0.1em;
+}
+
 .card3 {
   background-color: #ebaf17;
+}
+
+.card3:hover {
+  letter-spacing: 0.1em;
 }
 
 .card-container {
@@ -398,7 +406,6 @@ textarea {
 }
 
 /* About Page */
-
 .profile-image {
   border-radius: 15px;
   margin: 0 auto;

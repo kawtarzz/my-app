@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import { motion } from "framer-motion";
 import "@/app/globals.css";
 import ColorBlocks from "../components/ColorBlocks";
 
@@ -47,15 +47,27 @@ const Contact = () => {
     <>
       <ColorBlocks />
       <div className="content container">
-      <h1 className="contact-title">Contact Me</h1>
-      <p className="subtitle">
+        <motion.h1
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="title"
+          >Contact Me     </motion.h1>
+          <p className="subtitle">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
         Have a question or want to work together? Fill out the form below or
         email me directly at{" "}
         <a href="mailto:kawtaryazzouzi@gmail.com" />
-      </p>
+          </motion.span>
+          </p>
+          
 
       <form onSubmit={sendEmail}>
-        <div className="contact-form">
+       
         <label
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           htmlFor="grid-name"
@@ -86,8 +98,6 @@ const Contact = () => {
           value={templateParams.email}
           required
           />
-      
-       
           <label
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           htmlFor="grid-subject"
@@ -118,15 +128,10 @@ const Contact = () => {
           onChange={handleInputChange}
           required
           />
-          </div>
-     
-        <div className="md:flex">
-        <div>
           <button className="alt-btn" type="submit" value="Send">
           Send
           </button>
-        </div>
-        </div>
+   
       </form>
       </div>
     </>
