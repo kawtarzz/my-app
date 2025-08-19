@@ -28,6 +28,15 @@ export default function AboutPage() {
                     </p>
                     <hr />                    
                 </div>
+                <a
+                    href="/files/kawtar-azzouzi_resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="resume-link"
+                    data-aos="fade-up"
+                >
+                    View Resume (PDF)
+                </a>
            
             </div>
         </>
