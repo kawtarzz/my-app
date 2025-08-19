@@ -16,7 +16,7 @@ export default function AboutPage() {
                 <h2 data-aos="fade-up">
                     Full-Stack Web Developer & Designer
                 </h2>
-                <div className="col-xl-6 p-0" data-aos="fade-right">
+                <div className="col-xl-6 p-0"               data-aos="fade-right">
                     <p>
                         Kawtar Azzouzi is a Full-Stack Web Developer with a strong foundation in design, combining technical expertise with creative problem-solving to build user-focused applications. Currently based in Dover, New Hampshire, she brings 18+ months of professional web development experience working with clients ranging from environmental non-profits to healthcare startups.
                         <br />
@@ -26,7 +26,9 @@ export default function AboutPage() {
                         <br />
                         Outside of coding, Kawtar approaches creativity the same way she approaches development - always learning and experimenting. Whether she's mastering machine sewing techniques, hiking New Hampshire's trails, or picking up her guitar, she brings the same methodical problem-solving and attention to detail that makes her applications both functional and elegant. This curiosity and adaptability drive her continuous growth in both creative pursuits and emerging technologies.
                     </p>
-                    <hr />                    
+                </div>
+                <hr />
+                
                 <a
                     href="/files/kawtar-azzouzi_resume.pdf"
                     target="_blank"
@@ -36,7 +38,6 @@ export default function AboutPage() {
                 >
                     View Resume (PDF)
                 </a>
-                </div>
            
             </div>
         </>
