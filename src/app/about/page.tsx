@@ -28,6 +28,7 @@ export default function AboutPage() {
                     </p>
                     <br />
                 </div>
+
                 <hr />
                 <a
                     href="https://drive.google.com/file/d/1TbpHyF-VUFEWO3sAMNdBEsFIVAEtXdGF/view?usp=sharing"
@@ -38,8 +39,36 @@ export default function AboutPage() {
                 >
                     View Resume <i className="file-type">(PDF)</i>
                 </a>
-                
-           
+                 <hr />
+                <hr />
+                <div className="social-links" data-aos="fade-up">
+                    <a
+                        href="https://www.art.kawtar-azzouzi.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="resume-link"
+                    >
+                        Art & Design Portfolio
+                    </a>
+                       <hr />
+                    <a
+                        href="https://www.linkedin.com/in/kawtara/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="resume-link"
+                    >
+                        LinkedIn  
+                    </a>
+                    |
+                      <a
+                        href="https://www.Github.com/kawtarzz/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="resume-link"
+                    > Github
+                    </a>
+                       <hr />
+            </div>
             </div>
         </>
     );

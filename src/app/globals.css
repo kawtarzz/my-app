@@ -432,6 +432,7 @@ textarea {
   display: inline-block;
   margin-left: 10px;
   text-transform: uppercase;
+  padding: 0.5rem 1rem;
 }
 
 .resume-link:hover {
