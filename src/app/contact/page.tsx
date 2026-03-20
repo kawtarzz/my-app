@@ -54,19 +54,18 @@ const Contact = () => {
             className="title"
           >Contact Me     </motion.h1>
           <p className="subtitle">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+           
         Have a question or want to work together? Fill out the form below or
-        email me directly at{" "}
+            email me directly at : <a href="mailto:kawtaryazzouzi@gmail.com" className="email-link">
+              kawtaryazzouzi@gmail.com
+            </a>
         <a href="mailto:kawtaryazzouzi@gmail.com" />
-          </motion.span>
+      
           </p>
           
-
-      <form onSubmit={sendEmail}>
+<div className="contact-form">
+        <form onSubmit={sendEmail}>
+          
        
         <label
           className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -133,6 +132,7 @@ const Contact = () => {
           </button>
    
       </form>
+        </div>
       </div>
     </>
   );
