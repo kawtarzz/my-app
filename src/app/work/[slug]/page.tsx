@@ -1,18 +1,13 @@
-"use client";
 import "@/app/globals.css";
 import React from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import ColorBlocks from "../components/ColorBlocks";
-import { CardList } from "../components/Card";
-import { projects } from "../components/data";
+import { projects } from "../../components/data";
 
 interface PageProps {
   params: { slug: string };
 }
-
 export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }

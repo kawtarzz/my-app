@@ -30,7 +30,7 @@ export default function LandingPage() {
           <motion.div className="card card3" 
           initial={{ opacity: 0, x: 1000 }} 
           animate={{ opacity: 1, x: 0 }} 
-          transition={{ duration: .8, delay: 0.5, ease: [0.87, 0, 0.13, 1] }}
+          transition={{ duration: .8, delay: 0.45, ease: [0.87, 0, 0.13, 1] }}
           exit={{ opacity: 0, x: -100 }}>
             <Link href="/contact">
               Contact

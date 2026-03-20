@@ -92,7 +92,7 @@ h3 {
   @apply text-5xl font-bold;
   letter-spacing: .04em;
   color: var(--secondary-color);
-  padding: 1rem;
+  padding: 2rem 0;
   width: 100%;
   text-align: center;
 
@@ -123,7 +123,8 @@ button {
   font-size: 1.3rem;
   text-transform: uppercase;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: auto;
+  max-width: 300px;
 }
 
 button:hover {
@@ -215,6 +216,8 @@ textarea {
   letter-spacing: .1rem;
   text-transform: uppercase;
   margin: 0 auto;
+  max-width: 350px;
+  padding: 0.5rem 0;
 }
 
 .project-subtitle {
@@ -222,7 +225,7 @@ textarea {
   color: var(--tertiary-color);
   font-weight: 600;
   margin: 0 auto;
-  padding: 1rem 0 1rem 40px;
+  padding: 0.5rem 0;
 }
 
 .subtitle {
@@ -239,6 +242,7 @@ textarea {
   padding: 1rem;
   text-decoration: none;
   transition: all 0.3s ease;
+  text-align: left;
 }
 
 .portfolio-box {
@@ -455,12 +459,12 @@ textarea {
 /* ── Professional Project Additions ─────────────────────────── */
 
 .project-category-tag {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.12em;
+  padding: 1rem 0;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin-bottom: 0.25rem;
 }
 
 .project-role {
