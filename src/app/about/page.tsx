@@ -1,75 +1,96 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import React from 'react';
 import ColorBlocks from '../components/ColorBlocks';
 
 export default function AboutPage() {
-    return (
-        <>
-            <ColorBlocks />
-          
-            <div className="about-page content">
-                <Image src="/images/kawtar-azzouzi_headshot.jpg" alt="Kawtar Azzouzi" width={500} height={400} className="profile-image" />
-                   <h1 data-aos="fade-up" className="page-title">
-                    Kawtar Azzouzi
-                </h1>
-                <h2 data-aos="fade-up" className="subtitle">
-                    Full-Stack Web Developer & Designer
-                </h2>
-                <div className="col-xl-6 p-0"               data-aos="fade-right">
-                    <p className="about-text">
-                        Kawtar Azzouzi is a Full-Stack Web Developer with a strong foundation in design, combining technical expertise with creative problem-solving to build user-focused applications. Currently based in Dover, New Hampshire, she brings 18+ months of professional web development experience working with clients ranging from environmental non-profits to healthcare startups.
-                        <br />
-                        <br />
-                        Her recent work includes building complex data-driven websites with custom database architecture, API integrations, and responsive design solutions. She's currently exploring modern frontend frameworks and cloud deployment strategies to expand her technical toolkit.
-                        <br />
-                        <br />
-                        Outside of coding, Kawtar approaches creativity the same way she approaches development - always learning and experimenting. Whether she's mastering machine sewing techniques, hiking New Hampshire's trails, or picking up her guitar, she brings the same methodical problem-solving and attention to detail that makes her applications both functional and elegant. This curiosity and adaptability drive her continuous growth in both creative pursuits and emerging technologies.
-                    </p>
-                    <br />
-                </div>
+  return (
+    <>
+      <ColorBlocks />
 
-                <hr />
-                <a
-                    href="https://docs.google.com/document/d/1FwIPFZkGS6zlETzvIRh6c0VIf0cJyhxy/edit?usp=sharing&ouid=105577778322514330877&rtpof=true&sd=true"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="resume-link"
-                    data-aos="fade-up"
-                >
-                    View Resume <i className="file-type">(PDF)</i>
-                </a>
-                 <hr />
-                <hr />
-                <div className="social-links" data-aos="fade-up">
-                    {/* <a
-                        href="https://www.art.kawtar-azzouzi.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="resume-link"
-                    >
-                        Art & Design Portfolio
-                    </a> */}
-                       <hr />
-                    <a
-                        href="https://www.linkedin.com/in/kawtara/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="resume-link"
-                    >
-                        LinkedIn  
-                    </a>
-                    |
-                      <a
-                        href="https://www.Github.com/kawtarzz/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="resume-link"
-                    > Github
-                    </a>
-                       <hr />
-            </div>
-            </div>
-        </>
-    );
+      <div className="about-page">
+
+        {/* ── Photo + Name ── */}
+        <div className="about-hero">
+          <Image
+            src="/images/kawtar-azzouzi_headshot.jpg"
+            alt="Kawtar Azzouzi"
+            width={220}
+            height={220}
+            className="profile-image"
+          />
+          <h1 className="page-title">Kawtar Azzouzi</h1>
+          <p className="about-title">Web Designer & Developer · UI/UX</p>
+        </div>
+
+     {/* ── Bio ── */}
+        <section className="about-bio">
+        <p>
+            I'm a web designer and developer based in Dover, New Hampshire, with a focus on
+            UI/UX design, information architecture, and building clean, accessible digital
+            experiences for mission-driven clients.
+        </p>
+        <p>
+            Most recently I was an Associate Web Developer & Designer at Tangram 3DS, where
+            I joined as a Junior Web Designer in August 2024 and was promoted after one year.
+            My work there spanned client-facing web design and development, content management,
+            and brand design — including building the full website for the{' '}
+            <a href="https://shea4nh.org" target="_blank" rel="noopener noreferrer">
+            Seabrook-Hamptons Estuary Alliance
+            </a>{' '}
+            and leading the full redesign and build of the{' '}
+            <a href="https://floridawildlifecorridor.org" target="_blank" rel="noopener noreferrer">
+            Florida Wildlife Corridor Foundation
+            </a>{' '}
+            website — a complex WordPress project involving custom post types, a bespoke
+            Eventbrite sync plugin, AJAX-powered filtering, interactive Mapbox maps, and
+            integrations with Neon CRM and ACF Pro, from architecture through to client
+            training and launch.
+        </p>
+        <p>
+            I care about the full design-to-deployment pipeline — from early wireframes and
+            content strategy through to live implementation. Working across both design and
+            development on the same projects has given me a strong sense of where the two
+            disciplines need to stay in sync, and where they need room to move independently.
+        </p>
+        <p>
+            Outside of work, I approach creativity the same way I approach a technical
+            problem — with curiosity and a willingness to iterate. You'll usually find me
+            sewing, hiking New Hampshire trails, or picking up my guitar.
+        </p>
+        </section>
+
+        <hr />
+
+        {/* ── Links ── */}
+        <div className="about-links">
+          <a
+            href="https://docs.google.com/document/d/1FwIPFZkGS6zlETzvIRh6c0VIf0cJyhxy/edit?usp=sharing&ouid=105577778322514330877&rtpof=true&sd=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+          >
+            View Resume
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kawtara/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://www.github.com/kawtarzz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+          >
+            GitHub
+          </a>
+        </div>
+
+      </div>
+    </>
+  );
 }
