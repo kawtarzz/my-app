@@ -1,26 +1,28 @@
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
-import "animate.css/animate.compat.css"
+import type { Metadata } from 'next';
+import './globals.css'
+import Navigation from './components/Navigation';
+import { Footer } from './components/Footer';
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
-  title: "Kawtar Azzouzi",
-  description: "Web Development Portfolio",
-};
+  title: 'Kawtar Azzouzi — Brand, Web & UI/UX Designer',
+  description: 'I\'m a freelance designer & web developer crafting brands, websites, and digital experiences that help businesses grow. Based in [City].',
+  openGraph: {
+    title: 'Kawtar Azzouzi — Brand, Web & UI/UX Designer',
+    description: 'Freelance brand, web, and UI/UX designer available for projects.',
+    type: 'website',
+  },
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>
-        
+    <html lang="en" className="scroll-smooth">
+      <body className="antialiased">
+        <Navigation />
         {children}
-        </body>
+        <Footer />
+      </body>
     </html>
-  );
+  )
 }

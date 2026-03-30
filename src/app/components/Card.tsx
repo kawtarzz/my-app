@@ -1,169 +1,100 @@
-"use client";
-import { motion, Variants } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { Reveal } from "./Reveal"
+import { ArrowUpRight } from 'lucide-react';
+import { Project } from "../../lib/types";
 import Link from "next/link";
 import Image from "next/image";
-import "@/app/globals.css";
 
-interface Props {
-  id: number;
-  slug: string;
-  title: string;
-  subtitle: string;
-  category: string;
-  year: string;
-  role: string;
-  description: string;
-  problem: string;
-  solution: string;
-  techStack: string[];
-  url?: string;
-  demo?: string;
-  video?: string;
-  img: string;
+interface CardProject extends Project {
+  color?: string;
+  accentColor?: string;
+  letter?: string;
+  tags?: string[];
 }
 
-const cardVariants: Variants = {
-  offscreen: { opacity: 0, y: 100 },
-  onscreen: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring", bounce: 0.4, duration: 0.8 },
-  },
-};
-
-export default function Card({
-  slug,
-  title,
-  description,
-  category,
-  year,
-  role,
-  solution,
-  problem,
-  techStack,
-  url,
-  demo,
-  video,
-  img,
-}: Props) {
-  const [toggleCardContent, setToggleCardContent] = useState(false);
-  const [buttonText, setButtonText] = useState("Show Details");
-
-  const hasRepo = Boolean(url);
-  const hasDemo = Boolean(demo);
-  const isProfessional = !hasRepo;
-
-  useEffect(() => {
-    setButtonText(toggleCardContent ? "Hide Details" : "Show Details");
-  }, [toggleCardContent]);
-
-  return (
-    <div className="card-container">
-      <motion.div
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: [0.1, 0.4, 0.85, 1.01] }}
-          variants={cardVariants}
-        >
-          <div className="col">
-            {!toggleCardContent && (
-              <div className="content">
-                <Image
-                  src={img}
-                  alt={title}
-                  priority={true}
-                  width={500}
-                  height={500}
-                  className="card-image"
-                  onClick={() => setToggleCardContent(true)}
-                />
-                <span className="project-category-tag">{category} · {year}</span>
-                <h2 className="project-title">{title}</h2>
-                <button onClick={() => setToggleCardContent(true)}>{buttonText}</button>
-              </div>
-            )}
-
-            {toggleCardContent && (
-              <div className="content">
-                <Image
-                  src={img}
-                  alt={title}
-                  priority={true}
-                  width={700}
-                  height={700}
-                  className="card-image"
-                  onClick={() => setToggleCardContent(false)}
-                />
-                <span className="project-category-tag">{category} · {year}</span>
-                <h2 className="project-title">{title}</h2>
-                <p className="project-role">Role: <strong>{role}</strong></p>
-                <button onClick={() => setToggleCardContent(false)}>{buttonText}</button>
-
-                <div className="project-text">
-                  <p>{description}</p>
-                  <br />
-                  <p><strong>Problem:</strong> {problem}</p>
-                  <br />
-                  <p><strong>Solution:</strong> {solution}</p>
-                </div>
-
-                {techStack?.length > 0 && (
-                  <div className="project-subtitle">
-                    <h3>{isProfessional ? "Skills & Tools" : "Tech Stack"}</h3>
-                    <div className="tech-tag-list">
-                      {techStack.map((tech) => (
-                        <span key={tech} className="tech-tag">{tech}</span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {video && (
-                  <div className="video-container">
-                    <video controls>
-                      <source src={video} type="video/mp4" />
-                    </video>
-                  </div>
-                )}
-
-                <div className="btn-container">
-                  {hasRepo && (
-                    <Link href={url!} target="_blank">
-                      <button>GitHub</button>
-                    </Link>
-                  )}
-                  {hasDemo && (
-                    <Link href={demo!} target="_blank">
-                      <button>{isProfessional ? "Live Site" : "Demo"}</button>
-                    </Link>
-                  )}
-                  {!hasRepo && !hasDemo && (
-                    <span className="internal-note">Internal project — not publicly available</span>
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-        </motion.div>
-      </motion.div>
-    </div>
-  );
+interface CardProps {
+  projects: CardProject[];
 }
 
-export function CardList({ projects }: { projects: Props[] }) {
+export function CardList({ projects }: CardProps) {
   return (
-    <div className="portfolio-box">
-      {projects.map((project: Props) => (
-        <div key={project.id}>
-          <Card {...project} />
+    <section id="work" className="py-28 px-6 max-w-6xl mx-auto">
+      <Reveal className="flex items-end justify-between mb-14 flex-wrap gap-4">
+        <div>
+          <span className="font-mono text-[0.68rem] tracking-widest uppercase text-rust flex items-center gap-3 mb-4">
+            <span className="inline-block w-6 h-px bg-rust" /> Selected work
+          </span>
+          <h2 className="font-display font-bold text-ink leading-tight" style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)' }}>
+            Recent <em className="italic font-light text-ink-muted">projects</em>
+          </h2>
         </div>
-      ))}
-    </div>
-  );
+
+      </Reveal>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {projects.map((p, i) => (
+          <Reveal key={p.id} delay={i * 0.08}>
+            <Link href={`/work/` + `${p.slug}`}>
+              <div
+                className="project__img relative rounded-sm overflow-hidden"
+                style={{ background: p.color ?? 'linear-gradient(135deg,#111827,#1f2937)' }}
+                data-hover
+              >
+                <Image
+                  src={p.img}
+                  alt={p.title}
+                  width={400}
+                  height={400}
+                  className="project__img"
+                />
+
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span
+                    className="font-display font-black leading-none select-none transition-transform duration-700 group-hover:scale-110"
+                    style={{
+                      fontSize: '12rem',
+                      color: 'transparent',
+                      WebkitTextStroke: `1px ${p.accentColor ?? '#ffffff'}30`,
+                    }}
+                  >
+                    {p.letter ?? p.title?.[0]?.toUpperCase() ?? ''}
+                  </span>
+                </div>
+
+                {/* Top tags */}
+                <div className="absolute top-5 left-5 flex flex-wrap gap-2 z-10">
+                  {p.tags?.map((t) => (
+                    <span key={t} className="font-mono text-[0.6rem] tracking-wider uppercase px-2.5 py-1 rounded-full border text-white/70 border-white/20">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Year */}
+                <div className="absolute top-5 right-5 font-mono text-[0.62rem] tracking-wider text-white/40">
+                  {p.year}
+                </div>
+
+                {/* Bottom info */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <div className="font-mono text-[0.65rem] tracking-widest uppercase mb-1.5" style={{ color: p.accentColor ?? '#f8fafc' }}>
+                    {p.category}
+                  </div>
+                  <div className="font-display font-semibold text-white text-xl">{p.title}</div>
+                </div>
+
+                {/* Hover arrow */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
+                    <ArrowUpRight size={18} className="text-white" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+          </Reveal>
+        ))}
+      </div>
+    </section >
+  )
 }

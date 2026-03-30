@@ -17,7 +17,11 @@ const config: Config = {
         'dark-blue': '#1A2474',
         'input-bg': '#E5E7EB',
         'white': '#fff',
-      }
+     },
+      fontFamily: {
+        sans: ['var(--font-inter)'], // Overrides the default sans stack
+        custom: ['var(--font-custom)'], // Adds a new 'font-custom' utility
+      },
     },
   },
   plugins: [],
