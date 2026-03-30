@@ -1,15 +1,16 @@
 'use client';
-import React from "react";
-import LandingPage from "./components/LandingPage";
+import { Hero } from './components/Hero';
+import AboutPage from './about/page';
+import WorkPage from './work/page';
+import Contact from './contact/page';
 
 export default function Home() {
   return (
-    <main className="home-layout">
-      <div className="home-intro">
-        <h1 className="home-name">Kawtar Azzouzi</h1>
-        <p className="home-title">Web Designer & Developer</p>
-      </div>
-      <LandingPage />
+    <main>
+      <Hero />
+      <AboutPage />
+      <WorkPage />
+      <Contact />
     </main>
   );
 }

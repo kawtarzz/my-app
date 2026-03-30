@@ -1,25 +1,6 @@
-export type Project = {
-  id: number;
-  slug: string;
-  title: string;
-  subtitle: string;
-  category: string;
-  year: string;
-  role: string;
-  description: string;
-  problem: string;
-  solution: string;
-  techStack: string[];
-  url?: string;
-  demo?: string;
-  video?: string;
-  img: string;
-  features?: string[];
-  stakeholders?: string[];
-  highlights?: string[];
-};
+import { Project } from "./types";
 
-export const projects: Project[] = [
+const projects: Project[] = [
   {
     id: 1,
     slug: "seabrook-hamptons-estuary-alliance",
@@ -117,11 +98,7 @@ export const projects: Project[] = [
     year: "2024–Present",
     role: "Junior Web Designer → Associate Web Developer/Designer",
     description:
-      "Since joining Tangram 3DS in August 2024 as a Junior Web Designer and Graphic Designer, I've contributed to a wide range of internal marketing and web projects — from maintaining and evolving the company website to producing marketing collateral, email campaigns, and social media content. After one year I was promoted to an Associate role with a focus in UI/UX design, client relations, content management, information architecture and web development.",
-    problem:
-      "Growing a digital agency's internal brand requires the same rigor as client work — consistent visual systems, a clear content strategy, and a website that accurately reflects the team's evolving capabilities. Day-to-day, this means managing competing priorities: keeping web content current, supporting sales with design assets, and building brand presence across channels.",
-    solution:
-      "I developed and maintained internal web pages, created Figma-based design assets and wireframes, produced email marketing campaigns, and managed content updates across the company's digital touchpoints. In my promoted Associate role, I took on greater ownership of UI/UX decisions, client communication, and information architecture planning for both internal projects and client engagements. My work spans the full design-to-deployment pipeline — from early concept and wireframe through to live implementation.",
+    " Since joining Tangram 3DS in August 2024 as a Junior Web Designer and Graphic Designer, I've contributed to a wide range of internal marketing and web projects. Working in a small boutique agency required me to wear many hats. From maintaining and evolving the company website , producing marketing collateral, email campaigns, and social media content while managing the client projects we had on the roster. After one year I was promoted to an Associate role with a focus in UI/UX design, client relations, content management, information architecture and web development. My work spans the full design-to-deployment pipeline — from early concept and wireframe through to live implementation.",
     techStack: [
       "WordPress",
       "Figma",
@@ -283,3 +260,5 @@ export const projects: Project[] = [
     
   }
 ];
+
+export default projects;
