@@ -30,64 +30,53 @@ export function CardList({ projects }: CardProps) {
 
       </Reveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {projects.map((p, i) => (
           <Reveal key={p.id} delay={i * 0.08}>
             <Link href={`/work/` + `${p.slug}`}>
               <div
-                className="project__img relative rounded-sm overflow-hidden"
+                className="project__img relative rounded-sm overflow-hidden inset-0 flex items-start gap-10"
                 style={{ background: p.color ?? 'linear-gradient(135deg,#111827,#1f2937)' }}
                 data-hover
               >
                 <Image
                   src={p.img}
                   alt={p.title}
-                  width={400}
-                  height={400}
+                  width={350}
+                  height={350}
                   className="project__img"
                 />
+              </div>
+              <div className="flex items-center justify-center font-display font-light italic leading-[0.92] tracking-tight text-ink-mute py-4" style={{ fontSize: 'clamp(1rem, 2vw, 1.5rem)' }}>
+                {p.title}
+              </div>
 
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span
-                    className="font-display font-black leading-none select-none transition-transform duration-700 group-hover:scale-110"
-                    style={{
-                      fontSize: '12rem',
-                      color: 'transparent',
-                      WebkitTextStroke: `1px ${p.accentColor ?? '#ffffff'}30`,
-                    }}
-                  >
-                    {p.letter ?? p.title?.[0]?.toUpperCase() ?? ''}
+              {/* Top tags */}
+              <div className="absolute top-5 left-5 flex flex-wrap gap-2 z-10">
+                {p.tags?.map((t) => (
+                  <span key={t} className="font-mono text-[0.6rem] tracking-wider uppercase px-2.5 py-1 rounded-full border text-white/70 border-white/20">
+                    {t}
                   </span>
-                </div>
+                ))}
+              </div>
 
-                {/* Top tags */}
-                <div className="absolute top-5 left-5 flex flex-wrap gap-2 z-10">
-                  {p.tags?.map((t) => (
-                    <span key={t} className="font-mono text-[0.6rem] tracking-wider uppercase px-2.5 py-1 rounded-full border text-white/70 border-white/20">
-                      {t}
-                    </span>
-                  ))}
-                </div>
+              {/* Year */}
+              <div className="absolute top-5 right-5 font-mono text-[0.62rem] tracking-wider text-white/40">
+                {p.year}
+              </div>
 
-                {/* Year */}
-                <div className="absolute top-5 right-5 font-mono text-[0.62rem] tracking-wider text-white/40">
-                  {p.year}
+              {/* Bottom info */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="font-mono text-[0.65rem] tracking-widest uppercase mb-1.5" style={{ color: p.accentColor ?? '#f8fafc' }}>
+                  {p.category}
                 </div>
+                <div className="font-display font-semibold text-white text-xl">{p.title}</div>
+              </div>
 
-                {/* Bottom info */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className="font-mono text-[0.65rem] tracking-widest uppercase mb-1.5" style={{ color: p.accentColor ?? '#f8fafc' }}>
-                    {p.category}
-                  </div>
-                  <div className="font-display font-semibold text-white text-xl">{p.title}</div>
-                </div>
-
-                {/* Hover arrow */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
-                    <ArrowUpRight size={18} className="text-white" />
-                  </div>
+              {/* Hover arrow */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
+                  <ArrowUpRight size={18} className="text-white" />
                 </div>
               </div>
             </Link>
