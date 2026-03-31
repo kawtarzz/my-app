@@ -1,9 +1,13 @@
 "use client";
 import { CardList } from "../components/Card";
-import projects from "../../lib/projects";
+import projects from '@/lib/projects';
 
 const WorkPage = () => {
-  return <CardList projects={projects} />
+  return (
+    <section id="work">
+      <CardList projects={projects} />
+    </section>
+  )
 }
 
 export default WorkPage;

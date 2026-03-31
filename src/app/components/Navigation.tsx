@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
@@ -7,6 +8,8 @@ import Link from 'next/link';
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 40)
@@ -14,8 +17,8 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', h)
   }, [])
 
-
-  const links = ['work', 'about', 'contact']
+  const links = ['work', 'about', 'contact'];
+  const href = (anchor: string) => isHome ? `#${anchor}` : `/#${anchor}`;
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4 bg-[#F7F4EF]/90 backdrop-blur-md border-b border-[#1C1917]/10' : 'py-7'}`}>
@@ -29,9 +32,9 @@ export default function Navigation() {
         <ul className="hidden md:flex items-center gap-8">
           {links.map(l => (
             <li key={l}>
-              <a href={`/${l.toLowerCase()}`} className="font-sans text-[0.78rem] tracking-widest uppercase text-ink-muted hover:text-rust transition-colors duration-300 font-medium">
+              <Link href={href(l)} className="font-sans text-[0.78rem] tracking-widest uppercase text-ink-muted hover:text-rust transition-colors duration-300 font-medium">
                 {l}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -42,7 +45,7 @@ export default function Navigation() {
             <span className="w-1.5 h-1.5 rounded-full bg-sage animate-pulse" />
             Available
           </span>
-          <Link href="/contact" className="bg-rust text-white text-[0.75rem] tracking-widest uppercase font-medium px-5 py-2.5 rounded-sm hover:bg-rust-dark transition-colors duration-300">
+          <Link href={href('contact')} className="bg-rust text-white text-[0.75rem] tracking-widest uppercase font-medium px-5 py-2.5 rounded-sm hover:bg-rust-dark transition-colors duration-300">
             Let's Talk
           </Link>
         </div>
@@ -69,15 +72,15 @@ export default function Navigation() {
             className="md:hidden absolute top-full left-0 right-0 bg-[#F7F4EF] border-b border-[#1C1917]/10 px-6 py-6 flex flex-col gap-5"
           >
             {links.map(l => (
-              <a key={l} href={`#${l.toLowerCase()}`} onClick={() => setMenuOpen(false)}
+              <Link key={l} href={href(l)} onClick={() => setMenuOpen(false)}
                 className="font-sans text-sm tracking-widest uppercase text-ink-muted hover:text-rust transition-colors font-medium">
                 {l}
-              </a>
+              </Link>
             ))}
-            <a href="#contact" onClick={() => setMenuOpen(false)}
+            <Link href={href('contact')} onClick={() => setMenuOpen(false)}
               className="bg-rust text-white text-[0.75rem] tracking-widest uppercase font-medium px-5 py-3 rounded-sm text-center w-full">
               Let's Talk
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
