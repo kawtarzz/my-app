@@ -3,7 +3,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Reveal } from "../components/Reveal";
 import { ArrowUpRight, Mail } from 'lucide-react';
-import { FaLinkedin, FaGithub, FaPaperPlane, FaRegFilePDF } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaPaperPlane, FaRegFilePdf } from "react-icons/fa";
 import Link from "next/link";
 
 const Contact = () => {
@@ -15,7 +15,7 @@ const Contact = () => {
   });
 
 
-  const sendEmail = (e: React.SubmitEvent<HTMLFormElement>) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const serviceID = 'service_ii6ih5p';
@@ -70,7 +70,7 @@ const Contact = () => {
                 <Mail size={15} /> hello@kawtar.dev
               </Link>
               <div className="flex items-center gap-4">
-                {[{ icon: FaGithub, label: 'Github', url: 'https://github.com/kawtarzz' }, { icon: FaLinkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/kawtara' }, { icon: FaRegFilePDF, label: 'Resume', url: 'https://drive.google.com/file/d/1CujGs8jHR1h9H0qVw14Mu1Mg47Zb-P8h/view?usp=sharing' }, { icon: FaPaperPlane, label: 'Email', url: 'mailto:hello@kawtar.dev' }
+                {[{ icon: FaGithub, label: 'Github', url: 'https://github.com/kawtarzz' }, { icon: FaLinkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/kawtara' }, { icon: FaRegFilePdf, label: 'Resume', url: 'https://drive.google.com/file/d/1CujGs8jHR1h9H0qVw14Mu1Mg47Zb-P8h/view?usp=sharing' }, { icon: FaPaperPlane, label: 'Email', url: 'mailto:hello@kawtar.dev' }
 
                 ].map(({ icon: Icon, label, url }) => (
                   <Link key={label} href={url} className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-rust/50 hover:text-rust text-ink/40 transition-all duration-300" target="_blank">
