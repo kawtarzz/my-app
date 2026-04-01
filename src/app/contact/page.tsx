@@ -85,7 +85,6 @@ const Contact = () => {
               name="contact"
               onSubmit={sendEmail}
               className="space-y-5"
-              data-netlify="true"
             >
               <label
                 className="block font-mono text-[0.65rem] tracking-widest uppercase text-ink/40 mb-2"
