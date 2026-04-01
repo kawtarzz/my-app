@@ -18,8 +18,6 @@ export default async function ProjectPage({ params }: PageProps) {
 
   if (!project) return notFound();
 
-
-
   return (
     <section className="min-h-screen pb-10 pt-36 px-6 max-w-6xl mx-auto">
       <ProjectHero project={project} />

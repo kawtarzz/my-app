@@ -30,31 +30,7 @@ const projects: Project[] = [
     ],
     url: "",
     demo: "https://shea4nh.org/",
-    img: "/images/shea-preview.webp",
-    highlights: [
-      "Managed complex stakeholder feedback process across multiple review cycles",
-      "Created scalable content management system for non-technical users",
-      "Designed information architecture balancing scientific depth with public accessibility",
-      "Developed visual identity that reflects coastal environment while maintaining professionalism",
-    ],
-        features: [
-      "Multi-level navigation with contextual dropdowns for 30+ pages",
-      "Dynamic scrolling calendar banner showcasing upcoming events and workshops",
-      "Interactive carousel galleries for exploring ecosystem topics and conservation work",
-      "Filterable resource library for educational materials and documentation",
-      "Event calendar integration with workshop materials archive",
-      "Custom page templates for committees, projects, annual reports, and grant opportunities",
-      "Mobile-responsive design with coastal visual theming (custom typography, grassland footer elements)",
-      "Integrated contact forms and newsletter signup",
-      "Photo contest gallery system for National Estuaries Week annual celebration",
-    ],
-    stakeholders: [
-      "SHEA Board of Directors",
-      "Staff coordinators and administrators",
-      "Community representatives from Hampton, Hampton Falls, and Seabrook",
-      "Coastal Hazards Adaptation Team (CHAT) members",
-      "Partner organizations (NHDES, PREP, NOAA, UNH)",
-    ],
+    img: "/images/shea-preview.webp"
   },
   {
     id: 2,
@@ -95,10 +71,10 @@ const projects: Project[] = [
     title: "Tangram 3DS — Internal Marketing & Web",
     subtitle: "WordPress · Figma · Email · Social · Brand · UI/UX",
     category: "In-House Design & Development",
-    year: "2024–Present",
-    role: "Junior Web Designer → Associate Web Developer/Designer",
+    year: "2024-2026",
+    role: "Associate Web Developer/Designer",
     description:
-    " Since joining Tangram 3DS in August 2024 as a Junior Web Designer and Graphic Designer, I've contributed to a wide range of internal marketing and web projects. Working in a small boutique agency required me to wear many hats. From maintaining and evolving the company website , producing marketing collateral, email campaigns, and social media content while managing the client projects we had on the roster. After one year I was promoted to an Associate role with a focus in UI/UX design, client relations, content management, information architecture and web development. My work spans the full design-to-deployment pipeline — from early concept and wireframe through to live implementation.",
+    " After joining Tangram 3DS in August 2024 as a Junior Web Designer and Graphic Designer, I've contributed to a wide range of internal marketing and web projects. Working in a small boutique agency required me to wear many hats. From maintaining and evolving the company website , producing marketing collateral, email campaigns, and social media content while managing the client projects we had on the roster. After one year I was promoted to an Associate role with a focus in UI/UX design, client relations, content management, information architecture and web development. My work spans the full design-to-deployment pipeline — from early concept and wireframe through to live implementation.",
     techStack: [
       "WordPress",
       "Figma",
@@ -122,19 +98,7 @@ const projects: Project[] = [
       "Client-facing design presentations and UI/UX mockups",
       "Information architecture planning for client websites",
       "Brand asset library maintenance and expansion",
-    ],
-    stakeholders: [
-      "Tangram 3DS leadership and sales team",
-      "Marketing and communications team",
-      "Client-facing project teams",
-      "Prospective clients and partners",
-    ],
-    highlights: [
-      "Promoted from Junior to Associate role within one year",
-      "Expanded role scope from execution to strategic UI/UX and client relations",
-      "Maintained brand consistency across digital channels while supporting business growth",
-      "Contributed to both internal operations and client project success",
-    ],
+    ]
   },
   {
     id: 4,
@@ -152,8 +116,8 @@ const projects: Project[] = [
       "CookiJar meets this challenge by allowing users to define their own rewards and point system. Users can create, view, edit, and delete tasks, earning points for each completed task. Accumulated points can be redeemed for user-defined rewards. The application ensures a responsive user experience with Bootstrap and flexboxes, and provides error handling for form submissions and deletions. All user data is stored in a JSON server, making each user's experience unique. This project, my first using React, enhanced my understanding of the framework, REST APIs, and fetch calls for querying APIs.",
     techStack: ["React", "Bootstrap", "JavaScript", "CSS", "HTML", "JSON Server"],
     url: "https://github.com/kawtarzz/cooki-jar",
-    demo: "https://cooki-jar.vercel.app/",
-    img: "images/cookijar_02.svg",
+    demo: "https://cookijar.netlify.app/",
+    img: "/images/cookijar_02.svg",
     features: [
       "User authentication with login and registration",
       "Create, edit, and delete custom tasks with point values",
@@ -162,13 +126,7 @@ const projects: Project[] = [
       "Redeem points for user-defined rewards",
       "Responsive design optimized for multiple devices",
       "Real-time form validation and error handling",
-    ],
-    highlights: [
-      "First React project demonstrating rapid framework adoption",
-      "Implemented gamification mechanics to increase user engagement",
-      "Built complete CRUD operations with RESTful API integration",
-      "Designed intuitive UX for task and reward management",
-    ],
+    ]
   },
   {
     id: 5,
@@ -199,7 +157,7 @@ const projects: Project[] = [
     url: "https://github.com/kawtarzz/shoptheblock-ecomm-fullstack",
     demo: "https://locus-app-f0eb9.web.app/",
     video: "videos/shoptheblock_1.mp4",
-    img: "images/shoptheblock.svg",
+    img: "/images/shoptheblock.svg",
     features: [
       "User authentication and registration with Firebase",
       "Browse products by category with filtering options",
@@ -209,55 +167,7 @@ const projects: Project[] = [
       "Admin dashboard for product and inventory management",
       "Responsive design across desktop and mobile devices",
       "RESTful API built with ASP.NET Core and SQL Server",
-    ],
-    stakeholders: [
-      "Local artists and makers (sellers)",
-      "Community shoppers (buyers)",
-      "Platform administrators",
-    ],
-    highlights: [
-      "Built full-stack application integrating React frontend with C#/.NET backend",
-      "Implemented secure user authentication and role-based access control",
-      "Designed relational database schema for products, orders, and users",
-      "Created seamless shopping experience with cart persistence and checkout flow",
-    ],
-  },
-  {
-    id: 6,
-    slug: "seller-dashboard",
-    title: "Seller Dashboard",
-    subtitle: "Next.js | Prisma | Clerk | MySQL | Tailwind CSS | Cloudinary",
-    category: "Full Stack Development",
-    year: "2024",
-    role: "Full Stack Developer",
-    description:
-      " Seller Dashboard is a full-stack application that utilizes Next.js, Prisma, Clerk, and MySQL to provide a platform for sellers to manage their products and orders. The application features user authentication, full CRUD functionality, and a responsive design.",
-    problem:
-      "Create an application that allows sellers to create and manage multiple stores, add and update products, and view orders. The application should have a login and registration page, allowing users to create, read, update, and delete resources. It should support form-based resource creation and updates, querying options from the database using input selectors (radio, drop-down, check-box), and deleting resources. The application should be responsive, following the Single Responsibility principle and emphasizing modular code.",
-    solution: "I developed this project to challenge myself with a new technology stack. I used Next.js for the front end, Prisma for the ORM, Clerk for user authentication, and MySQL for the database. The application features a responsive design, user authentication, and full CRUD functionality. It also allows users to upload photos for their product and billboard listings. I faced challenges with configuring Cloudinary for image uploads and Clerk for user authentication, but I overcame these challenges by reading the documentation and seeking help from online developer communities.",
-    techStack: ["Next.js", "Prisma", "Clerk", "MySQL", "Tailwind CSS", "Cloudinary"],
-    url: "",
-    demo: "https://e-comm-admin-dash-git-main-kawtarzzs-projects.vercel.app/",
-    img: "images/sellerdashboard.svg",
-    features: [
-      "User authentication and registration with Clerk",
-      "Create and manage multiple stores",
-      "Add, update, and delete products with image uploads",
-      "View and manage orders",
-      "Responsive design with Tailwind CSS",
-      "RESTful API built with Next.js and Prisma",
-    ],
-    stakeholders: [
-      "Sellers managing their stores and products",
-      "Administrators overseeing the platform",
-    ],
-    highlights: [
-      "Built full-stack application with Next.js, Prisma, Clerk, and MySQL",
-      "Implemented user authentication and role-based access control",
-      "Designed responsive UI with Tailwind CSS",
-      "Overcame challenges with third-party integrations for image uploads and authentication",
     ]
-    
   }
 ];
 

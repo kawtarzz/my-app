@@ -20,7 +20,9 @@ const MetaSection = ({ label, items }: { label: string; items: string[] }) => (
 
 const ContentSection = ({ label, content }: { label: string; content: string; }) => (
   <div className="flex flex-col gap-3">
-    <span className="font-sans text-[0.7rem] tracking-widest uppercase font-medium text-rust">{label}</span>
+    <span className="font-sans text-[0.7rem] tracking-widest uppercase font-medium text-rust">
+      {label}
+    </span>
     <p className="gap-3 text-ink/80 leading-relaxed">
       {content}
     </p>
@@ -29,16 +31,15 @@ const ContentSection = ({ label, content }: { label: string; content: string; })
 );
 
 export default function ProjectContent({ project }: ProjectContentProps) {
-  const hasAny = project.problem?.length || project.solution?.length || project.highlights?.length || project.features?.length || project.stakeholders?.length;
+
+  const hasAny = project.problem?.length || project.solution?.length || project.features?.length;
+
   if (!hasAny) return null;
 
   return (
-    <div className="flex flex-col gap-10 max-w-xl mt-10 pt-10 border-b border-ink/10">
+    <div className="flex flex-col gap-10 max-w-xl pt-4 pb-8 border-b border-ink/10">
       {project.problem?.length && <ContentSection label="Problem" content={project.problem} />}
       {project.solution?.length && <ContentSection label="Solution" content={project.solution} />}
-      {project.highlights?.length && <MetaSection label="Highlights" items={project.highlights} />}
-      {project.features?.length && <MetaSection label="Features" items={project.features} />}
-      {project.stakeholders?.length && <MetaSection label="Stakeholders" items={project.stakeholders} />}
     </div>
   )
 }

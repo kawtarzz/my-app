@@ -15,8 +15,6 @@ export interface Project {
   demo?: string;
   video?: string;
   features?: string[];
-  highlights?: string[];
-  stakeholders?: string[];
 }
 
 export type PageContent =
