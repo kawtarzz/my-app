@@ -4,8 +4,7 @@ import emailjs from "@emailjs/browser";
 import { Reveal } from "../components/Reveal";
 import { ArrowUpRight, Mail } from 'lucide-react';
 import { FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
-
-
+import Link from "next/link";
 
 const Contact = () => {
   const [templateParams, setTemplateParams] = useState({
@@ -15,13 +14,17 @@ const Contact = () => {
     message: "",
   });
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+
+  const sendEmail = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const serviceID = 'service_ii6ih5p';
+    const templateID = 'template_fjl9j6l';
 
     emailjs
       .send(
-        "service_ii6ih5p",
-        "template_fjl9j6l",
+        serviceID,
+        templateID,
         templateParams,
         "oVuhuWy96mVwChvm2"
       )
@@ -47,8 +50,8 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="py-28 px-6 bg-cream mt-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+      <section id="contact" className="min-h-auto flex flex-col justify-start pb-40 pt-20 px-20 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left */}
           <Reveal>
             <span className="font-mono text-[0.68rem] tracking-widest uppercase text-rust/70 flex items-center gap-3 mb-6">
@@ -63,40 +66,43 @@ const Contact = () => {
             </p>
 
             <div className="space-y-5">
-              <a href="mailto:Kawtaryazzouzi@gmail.com" className="flex items-center gap-3 text-ink/60 hover:text-rust transition-colors text-sm font-medium">
+              <Link href="mailto:Kawtaryazzouzi@gmail.com" className="flex items-center gap-3 text-ink/60 hover:text-rust transition-colors text-sm font-medium">
                 <Mail size={15} /> Kawtaryazzouzi@gmail.com
-              </a>
+              </Link>
               <div className="flex items-center gap-4">
-                {[{ icon: FaGithub, label: 'Github' }, { icon: FaLinkedin, label: 'LinkedIn' }].map(({ icon: Icon, label }) => (
-                  <a key={label} href="#" className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-rust/50 hover:text-rust text-ink/40 transition-all duration-300">
+                {[{ icon: FaGithub, label: 'Github', url: 'https://github.com/kawtarzz' }, { icon: FaLinkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/kawtara' }, { icon: FaPaperPlane, label: 'Email', url: 'mailto:kawtaryazzouzi@gmail.com' }
+
+                ].map(({ icon: Icon, label, url }) => (
+                  <Link key={label} href={url} className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-rust/50 hover:text-rust text-ink/40 transition-all duration-300" target="_blank">
                     <Icon size={14} />
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
-
-            <div className="mt-14 p-6 border border-ink/10 rounded-sm">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-sage animate-pulse" />
-                <span className="font-mono text-[0.65rem] tracking-widest uppercase text-sage">Currently available</span>
-              </div>
-              <p className="text-ink/40 text-[0.8rem] font-light">
-                Booking projects starting <strong className="text-ink/60 font-medium">April 2026.</strong>
-              </p>
-            </div>
           </Reveal>
           <Reveal delay={0.15}>
-
-            <form onSubmit={sendEmail} className="space-y-5">
+            <form
+              name="contact"
+              onSubmit={sendEmail}
+              className="space-y-5"
+              netlify-honeypot="bot-field"
+              data-netlify="true"
+            >
+              <p className="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" type="text" />
+                </label>
+              </p>
               <label
                 className="block font-mono text-[0.65rem] tracking-widest uppercase text-ink/40 mb-2"
-                htmlFor="name"
+                htmlFor="from_name"
               >
                 Name
               </label>
               <input
                 className="w-full bg-white/5 border border-ink/10 rounded-sm px-4 py-3.5 text-ink text-sm placeholder-cream/20 focus:outline-none focus:border-rust/50 transition-colors font-light"
-                name="name"
+                name="from_name"
+                id="from_name"
                 type="text"
                 placeholder="Jane Doe"
                 onChange={handleInputChange}
@@ -112,6 +118,7 @@ const Contact = () => {
               <input
                 className="w-full bg-white/5 border border-ink/10 rounded-sm px-4 py-3.5 text-ink text-sm placeholder-cream/20 focus:outline-none focus:border-rust/50 transition-colors font-light"
                 name="email"
+                id="email"
                 type="text"
                 placeholder="JaneDoe@email.com"
                 onChange={handleInputChange}
@@ -132,8 +139,6 @@ const Contact = () => {
                 onChange={handleInputChange}
                 required
               />
-
-
               <label
                 className="block font-mono text-[0.65rem] tracking-widest uppercase text-ink/40 mb-2"
                 htmlFor="message"
@@ -143,12 +148,13 @@ const Contact = () => {
               <textarea
                 className="w-full bg-white/5 border border-ink/10 rounded-sm px-4 py-3.5 text-ink text-sm placeholder-cream/20 focus:outline-none focus:border-rust/50 transition-colors font-light resize-none"
                 name="message"
+                id="message"
                 placeholder="Your message here..."
                 value={templateParams.message}
                 onChange={handleInputChange}
                 required
               />
-              <button className="w-full bg-rust text-white py-4 text-[0.75rem] tracking-widest uppercase font-medium rounded-sm hover:bg-rust-dark transition-colors duration-300 flex items-center justify-center gap-2 group" type="submit" value="Send">
+              <button className="w-full bg-rust text-white py-4 text-[0.75rem] tracking-widest uppercase font-medium rounded-sm hover:bg-rust-dark transition-colors duration-300 flex items-center justify-center gap-2 group" type="submit" value="Send Email" id="button">
                 Send  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </button>
             </form>

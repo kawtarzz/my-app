@@ -1,13 +1,13 @@
 'use client';
 import Image from 'next/image';
-import { Reveal } from '../components/Reveal';
+import { Reveal } from '@/app/components/Reveal'
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <>
-      <section id="about" className="py-28 bg-cream-dark border-y border-[#1C1917]/10">
+      <section id="about" className="py-20 bg-cream border-y border-[#1C1917]/10">
         <div className="px-6 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Photo */}
@@ -35,7 +35,7 @@ export default function AboutPage() {
               <span className="font-mono text-[0.68rem] tracking-widest uppercase text-rust flex items-center gap-3 mb-4">
                 <span className="inline-block w-6 h-px bg-rust" /> About me
               </span>
-              <h2 className="font-display font-bold text-ink leading-tight mb-6" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>
+              <h2 className="font-display font-bold text-ink leading-tight mb-6">
                 The person behind<br />the <em className="italic font-light text-ink-muted">pixels</em>.
               </h2>
             </Reveal>
@@ -87,7 +87,7 @@ export default function AboutPage() {
             <Reveal delay={0.3} className="mt-10">
 
               <Link href="#contact"
-                className="inline-flex items-center gap-2 text-[0.78rem] tracking-widest uppercase font-medium bg-rust text-white px-6 py-3 rounded-sm hover:bg-rust-dark transition-colors duration-300"
+                className="inline-flex items-center gap-2 text-[0.78rem] tracking-widest uppercase font-medium bg-rust text-white px-6 py-3 rounded-sm hover:bg-rust-dark hover:text-cream transition-colors duration-300"
               >
                 Let's work together <ArrowUpRight size={13} />
               </Link>

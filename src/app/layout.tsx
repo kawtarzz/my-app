@@ -18,6 +18,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/oeb3vyd.css" />
+      </head>
       <body className="antialiased">
         <Navigation />
         {children}

@@ -1,17 +1,31 @@
-@import url('https: //use.typekit.net/oeb3vyd.css');
+@import url('https://use.typekit.net/oeb3vyd.css');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --font-display: "new-spirit-condensed", "Georgia", serif;
+  --font-sans: "bonnie", sans-serif;
+
   --cream: #F7F4EF;
   --cream-dark: #EEEAE2;
   --ink: #1C1917;
   --ink-muted: #78716C;
+  --blue: #0d275e;
+  --blue-dark: #07132c;
+  --blue-light: #c2d3f7;
   --rust: #C8523A;
   --rust-light: #F0DDD8;
   --rust-dark: #9C3F2A;
+
+  --fs-xs: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --fs-sm: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --fs-base: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --fs-md: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --fs-lg: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --fs-xl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --fs-xxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 }
 
 html {
@@ -26,6 +40,31 @@ body {
   font-style: normal;
 }
 
+h1 {
+  font-size: var(--fs-xxl);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+}
+
+h3 {
+  font-size: var(--fs-lg);
+}
+
+h4 {
+  font-size: var(--fs-md);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+  font-family: var(--font-display);
+}
+
 a {
   color: var(--primary);
   text-decoration: none;
@@ -34,6 +73,11 @@ a {
 
 a:hover {
   color: var(--secondary);
+}
+
+.title {
+  margin: 5px 0px;
+
 }
 
 .font-display {
@@ -54,16 +98,6 @@ a:hover {
   height: auto;
 }
 
-/* Project Details Page */
-.project__header {}
-
-.project__section {}
-
-.project__details {}
-
-.project__meta {}
-
-.section__label {}
 
 .project__img {
   overflow: hidden;
@@ -75,4 +109,29 @@ a:hover {
   justify-content: center;
   align-self: center;
   margin: 0 auto;
+  border: 2px solid transparent;
+  transition: border 0.4s ease-in-out;
+}
+
+.project__img:hover {
+  border: 2px solid var(--rust);
+}
+
+.project__img__detail {
+  overflow: hidden;
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  justify-content: center;
+  align-self: center;
+  margin: 0 auto;
+  transform: scale(1);
+  transition: scale 0.4s ease-in-out;
+}
+
+.project__img__detail:hover {
+  border: none;
+  transform: scale(1.01);
 }

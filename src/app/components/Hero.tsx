@@ -7,33 +7,21 @@ import Link from 'next/link';
 
 export function Hero() {
   return (
-    <section id="top" className="min-h-auto flex flex-col justify-start pb-40 pt-36 px-6 max-w-6xl mx-auto">
-
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
-        className="inline-flex items-center gap-2 mb-10 w-fit">
-
-        <span className="w-1.5 h-1.5 rounded-full bg-sage animate-pulse" />
-        <span className="font-mono text-[0.68rem] tracking-widest uppercase text-sage">
-          Available for projects — Q2 2026
-        </span>
-      </motion.div>
-
+    <section id="top" className="min-h-auto flex flex-col justify-start pb-20 pt-40 px-6 max-w-6xl mx-auto">
       <div className="overflow-hidden mb-6">
         <motion.h1
           initial={{ y: '100%' }} animate={{ y: 0 }}
           transition={{ duration: 0.9, delay: 0.25, ease: [0.28, 1, 0.36, 1] }}
           className="font-display font-black leading-[0.92] tracking-tight text-ink"
-          style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)' }}
         >
           Hi, I'm <em className="text-rust">Kawtar</em>.
         </motion.h1>
       </div>
       <div className="overflow-hidden mb-6">
         <motion.h1
-          initial={{ y: '100%' }} animate={{ y: 0 }}
-          transition={{ duration: 1.2, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display font-light italic leading-[0.92] tracking-tight text-ink-mute py-4"
-          style={{ fontSize: 'clamp(2rem, 4vw, 4.5rem)' }}
+          initial={{ y: '120%' }} animate={{ y: 0 }}
+          transition={{ duration: 1.2, delay: 0.45, ease: [0.22, 1, 0.3, 1] }}
+          className="font-display font-light italic leading-[0.92] tracking-tight text-ink-mute title"
         >
           Web Designer & Developer
         </motion.h1>
@@ -50,8 +38,8 @@ export function Hero() {
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.85, ease: [0.22, 1, 0.36, 1] }}
-        className="flex flex-wrap gap-4 mt-12"
+        transition={{ duration: 0.7, delay: 0.95, ease: [0.22, 1, 0.36, 1] }}
+        className="flex flex-wrap gap-4 mt-20"
       >
         <Link href="#work" className="group flex items-center gap-2 bg-ink text-cream font-sans text-[0.78rem] tracking-widest uppercase font-medium px-7 py-4 rounded-sm hover:bg-rust transition-colors duration-300">
           See my work
@@ -63,7 +51,7 @@ export function Hero() {
       </motion.div>
       <motion.div
         initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, delay: 1.2, ease: [0.29, 1, 0.36, 1] }}
         className="gap-4 mt-12"
       >
         <div className="flex flex-wrap items-center gap-10 iconContainer">
