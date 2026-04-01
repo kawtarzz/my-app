@@ -28,7 +28,7 @@ export default function Card({ p }: CardProps) {
           <h4 className="text-center tracking-tighter font-sans text-blue/80">
             {p.title}
           </h4>
-          <div className="font-sans text-[0.78rem] tracking-widest uppercase text-ink-muted hover:text-rust transition-colors duration-300 font-medium">{p.year}
+          <div className="font-sans text-[0.78rem] tracking-widest uppercase text-ink-muted hover:text-rust transition-colors duration-300 font-medium">{p.category}
           </div>
         </div>
 

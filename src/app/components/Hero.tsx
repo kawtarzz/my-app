@@ -27,7 +27,7 @@ export function Hero() {
         </motion.h1>
       </div>
 
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.75, ease: [0.22, 1, 0.36, 1] }}
         className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mt-2"
@@ -35,7 +35,7 @@ export function Hero() {
         <p className="max-w-sm text-[1.02rem] text-ink-muted leading-relaxed font-regular">
           I help mission-focused non-profits, startups & small businesses elevate their online presence — through branding, intuitive websites & digital experiences built with care.
         </p>
-      </motion.div>
+      </motion.div> */}
       <motion.div
         initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.95, ease: [0.22, 1, 0.36, 1] }}

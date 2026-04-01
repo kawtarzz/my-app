@@ -105,7 +105,7 @@ const projects: Project[] = [
     slug: "cookijar",
     title: "Cookijar",
     subtitle: "Rewarding productivity!",
-    category: "Web Development",
+    category: "Front End Development",
     year: "2023",
     role: "Frontend Developer",
     description:
