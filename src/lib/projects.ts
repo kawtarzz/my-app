@@ -74,7 +74,7 @@ const projects: Project[] = [
     year: "2024-2026",
     role: "Associate Web Developer/Designer",
     description:
-    " After joining Tangram 3DS in August 2024 as a Junior Web Designer and Graphic Designer, I've contributed to a wide range of internal marketing and web projects. Working in a small boutique agency required me to wear many hats. From maintaining and evolving the company website , producing marketing collateral, email campaigns, and social media content while managing the client projects we had on the roster. After one year I was promoted to an Associate role with a focus in UI/UX design, client relations, content management, information architecture and web development. My work spans the full design-to-deployment pipeline — from early concept and wireframe through to live implementation.",
+    " After joining Tangram 3DS in August 2024 as a Junior Web Designer and Graphic Designer, I contributed to a wide range of internal marketing and web projects. Working in a small boutique agency required me to wear many hats. From maintaining and evolving the company website , producing marketing collateral, email campaigns, and social media content while managing the client projects we had on the roster. After one year I was promoted to an Associate role with a focus in UI/UX design, client relations, content management, information architecture and web development. My work spans the full design-to-deployment pipeline — from early concept and wireframe through to live implementation.",
     techStack: [
       "WordPress",
       "Figma",
@@ -104,17 +104,16 @@ const projects: Project[] = [
     id: 4,
     slug: "cookijar",
     title: "Cookijar",
-    subtitle: "React | Bootstrap | JavaScript | CSS | HTML",
+    subtitle: "Rewarding productivity!",
     category: "Web Development",
     year: "2023",
-    role: "Full Stack Developer",
+    role: "Frontend Developer",
     description:
-      "CookiJar is a productivity tracking application that gamifies task management. Built with React and JSON server, it allows users to assign point values to tasks and earn rewards upon completion. The application features full CRUD functionality, user authentication, and a responsive design.",
-    problem:
-      "The challenge was to create an application that allows users to manage tasks and rewards, with a responsive design for various media displays. It required a login and registration page, account-specific resources upon authentication, and CRUD operations for tasks and rewards.",
+      "CookiJar is a productivity tracking application designed to gamify task management. Built with React and JSON Server, it allows users to move beyond a simple to-do list by assigning point values to their tasks. By completing goals, users earn points that can be redeemed for custom, user-defined rewards. The project features full CRUD functionality and a responsive design, providing a fun and interactive way to stay organized.",
+    problem: "The goal was to create a client-side application with React utilizing a REST API with JSON Server. that required secure user authentication and unique data sets for each user. I needed to implement a system where users could create, read, update, and delete both tasks and rewards while ensuring the UI was intuitive and responsive. Technical requirements included handling complex form states, managing a mock REST API with JSON Server, and utilizing various input selectors to ensure a smooth data-entry experience.",
     solution:
-      "CookiJar meets this challenge by allowing users to define their own rewards and point system. Users can create, view, edit, and delete tasks, earning points for each completed task. Accumulated points can be redeemed for user-defined rewards. The application ensures a responsive user experience with Bootstrap and flexboxes, and provides error handling for form submissions and deletions. All user data is stored in a JSON server, making each user's experience unique. This project, my first using React, enhanced my understanding of the framework, REST APIs, and fetch calls for querying APIs.",
-    techStack: ["React", "Bootstrap", "JavaScript", "CSS", "HTML", "JSON Server"],
+      "CookiJar meets this challenge by allowing users to define their own rewards and point system. When a user creates a task, they assign it a point value; once marked complete, those points are added to their total, which can then be 'spent' on rewards they’ve created. The layout uses a mobile-first approach with Tailwind CSS and Flexbox to ensure it looks great on any device. As my first React application, this project was pivotal in helping me master component-based architecture, state management, and using asynchronous fetch calls to interact with a REST API.",
+    techStack: ["React", "Tailwind CSS", "JavaScript", "CSS", "HTML", "JSON Server"],
     url: "https://github.com/kawtarzz/cooki-jar",
     demo: "https://cookijar.netlify.app/",
     img: "/images/cookijar_02.svg",
@@ -138,11 +137,11 @@ const projects: Project[] = [
     year: "2023",
     role: "Full Stack Developer",
     description:
-      "ShopTheBlock is a full-stack eCommerce platform designed to empower local artists and makers by providing a dedicated space to connect with and sell directly to their community. The platform is built with React.JS, ASP.NET Core, and SQL.",
+     "A full-stack E-Commerce platform built as my capstone project at Nashville Software School. ShoptheBlock features secure user authentication and a robust SQL database to manage products and orders. I developed a RESTful web API using C# and .NET Core to handle server-side logic, while building a dynamic, responsive frontend with React. From registration to order confirmation, the app provides a seamless shopping experience with real-time data management.",
     problem:
-      "To build a full-stack application with user authentication, full CRUD functionality, and an SQL database. The application should have a login and registration page, allowing users to create, read, update, and delete resources. It should support form-based resource creation and updates, querying options from the database using input selectors (radio, drop-down, check-box), and deleting resources. The application should be responsive, following the Single Responsibility principle and emphasizing modular code.",
+      "The challenge was to build a comprehensive full-stack application that implemented secure user authentication and full CRUD functionality within an SQL database. Beyond basic data handling, the project required a modular architecture following the Single Responsibility Principle. Key requirements included a responsive UI, complex form handling with various input selectors (dropdowns, radios, etc.), and an efficient way for users to manage their resources—all while maintaining clean, scalable code.",
     solution:
-      " An eCommerce platform offering personalized user account privileges. Upon registration, users gain the ability to browse and shop by specific categories or utilize a search function to find desired items. The platform features a user-friendly shopping cart where items can be added and stored as users continue to browse. A seamless checkout process culminates in an order confirmation, enhancing the overall shopping experience.",
+     "I began by mapping out user stories and wireframes to define the core experience, followed by designing a detailed ERD using DBdiagram to manage complex one-to-many and many-to-many relationships. On the backend, I utilized ADO.NET and SQL Server to build the API, while Firebase handled user authorization. On the frontend, I used React and Bootstrap to create a smooth user flow: shoppers can browse by category, search for items, and manage their persistent cart. The process culminates in a multi-step checkout that includes an order summary and payment form. This project was a deep dive into the React framework and taught me how to bridge the gap between a structured C# backend and a dynamic JavaScript frontend.",
     techStack: [
       "React",
       "Firebase",
