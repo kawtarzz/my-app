@@ -168,33 +168,6 @@ const projects: Project[] = [
       "Responsive design across desktop and mobile devices",
       "RESTful API built with ASP.NET Core and SQL Server",
     ]
-  },
-  {
-    id: 6,
-    slug: "seller-dashboard",
-    title: "Seller Dashboard",
-    subtitle: "Next.js | Prisma | Clerk | MySQL | Tailwind CSS | Cloudinary",
-    category: "Full Stack Development",
-    year: "2024",
-    role: "Full Stack Developer",
-    description:
-      " Seller Dashboard is a full-stack application that utilizes Next.js, Prisma, Clerk, and MySQL to provide a platform for sellers to manage their products and orders. The application features user authentication, full CRUD functionality, and a responsive design.",
-    problem:
-      "Create an application that allows sellers to create and manage multiple stores, add and update products, and view orders. The application should have a login and registration page, allowing users to create, read, update, and delete resources. It should support form-based resource creation and updates, querying options from the database using input selectors (radio, drop-down, check-box), and deleting resources. The application should be responsive, following the Single Responsibility principle and emphasizing modular code.",
-    solution: "I developed this project to challenge myself with a new technology stack. I used Next.js for the front end, Prisma for the ORM, Clerk for user authentication, and MySQL for the database. The application features a responsive design, user authentication, and full CRUD functionality. It also allows users to upload photos for their product and billboard listings. I faced challenges with configuring Cloudinary for image uploads and Clerk for user authentication, but I overcame these challenges by reading the documentation and seeking help from online developer communities.",
-    techStack: ["Next.js", "Prisma", "Clerk", "MySQL", "Tailwind CSS", "Cloudinary"],
-    url: "",
-    demo: "https://e-comm-admin-dash-git-main-kawtarzzs-projects.vercel.app/",
-    img: "/images/sellerdashboard.svg",
-    features: [
-      "User authentication and registration with Clerk",
-      "Create and manage multiple stores",
-      "Add, update, and delete products with image uploads",
-      "View and manage orders",
-      "Responsive design with Tailwind CSS",
-      "RESTful API built with Next.js and Prisma"
-    ]
-    
   }
 ];
 
