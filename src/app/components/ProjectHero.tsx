@@ -23,7 +23,7 @@ export default function ProjectHero({ project }: ProjectHeroProps) {
      </Link>
     </div>
     <div className="project__header">
-     <span className="font-sans text-[0.7rem] tracking-widest uppercase font-medium text-rust" >
+     <span className="font-sans text-[0.7rem] tracking-widest uppercase font-medium text-rust mb-6" >
       {project.category} · {project.year}</span>
      <div className="overflow-hidden mb-6">
 

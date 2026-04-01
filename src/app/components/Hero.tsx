@@ -66,7 +66,7 @@ export function Hero() {
                   <FaLinkedin size={30} className="text-ink" />
                 </Link>, 'LinkedIn'],
               [
-                <Link href="mailto:kawtaryazzouzi@gmail.com" target="_blank" rel="noopener noreferrer">
+                <Link href="mailto:hello@kawtar.dev" target="_blank" rel="noopener noreferrer">
                   <FaPaperPlane size={30} className="text-ink" />
                 </Link>, 'Email']
             ].map(([n, l], index) => (

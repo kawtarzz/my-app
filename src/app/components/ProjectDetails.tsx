@@ -21,8 +21,8 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
     <Image
      src={project.img}
      alt={project.title}
-     width={350}
-     height={350}
+     width={100}
+     height={100}
      className="project__img__detail"
     />
 
