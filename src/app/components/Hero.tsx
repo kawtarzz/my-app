@@ -58,11 +58,11 @@ export function Hero() {
           {
             [
               [
-                <Link href="https://github.com/kawtarzz" target="_blank" rel="noopener noreferrer">
+                <Link href="https://github.com/kawtar-azzouzi" target="_blank" rel="noopener noreferrer">
                   <FaGithub size={30} className="text-ink" />
                 </Link>, 'Github'],
               [
-                <Link href="https://linkedin.com/in/kawtarzz" target="_blank" rel="noopener noreferrer">
+                <Link href="https://linkedin.com/in/kawtar-azzouzi" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin size={30} className="text-ink" />
                 </Link>, 'LinkedIn'],
               [
