@@ -70,7 +70,7 @@ const Contact = () => {
                 <Mail size={15} /> hello@kawtar.dev
               </Link>
               <div className="flex items-center gap-4">
-                {[{ icon: FaGithub, label: 'Github', url: 'https://github.com/kawtar-azzouzi' }, { icon: FaLinkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/kawtar-azzouzi' }, { icon: FaRegFilePdf, label: 'Resume', url: 'https://drive.google.com/file/d/1DVN1FiWE3o_ZortlYAFlkGFAO8mk6kBM/view?usp=sharing' }, { icon: FaPaperPlane, label: 'Email', url: 'mailto:hello@kawtar.dev' }
+                {[{ icon: FaGithub, label: 'Github', url: 'https://github.com/kawtar-azzouzi' }, { icon: FaLinkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/kawtar-azzouzi' }, { icon: FaRegFilePdf, label: 'Resume', url: 'https://drive.google.com/file/d/1rph_-qAZHOeCC-DQ-DzZH4aQMaDLu5Jz/view?usp=drive_link' }, { icon: FaPaperPlane, label: 'Email', url: 'mailto:hello@kawtar.dev' }
 
                 ].map(({ icon: Icon, label, url }) => (
                   <Link key={label} href={url} className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:border-rust/50 hover:text-rust text-ink/40 transition-all duration-300" target="_blank">
